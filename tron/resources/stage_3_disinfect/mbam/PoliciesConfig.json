@@ -1,0 +1,25 @@
+57AE34571D973CECD568B3E659CF4C5899BCE5824EC9D4463E0B539E11C1488D
+{
+   "AutoStartService" : false,
+   "AutoStartServiceOverride" : false,
+   "CloseNotifyTimeout" : 5000,
+   "DisplayLanguage" : "en",
+   "EnableContextMenu" : true,
+   "ExportEventLogData" : false,
+   "NotifyWhenFullUpdatesAvailable" : false,
+   "Password" : "",
+   "ProtectedAreas" : 0,
+   "ProxyNeedAuth" : false,
+   "ProxyPassword" : "",
+   "ProxyPort" : 0,
+   "ProxyServer" : "",
+   "ProxyUserName" : "",
+   "RebootVisibility" : false,
+   "RestrictAccess" : false,
+   "ShowRealTimeNotification" : false,
+   "ShowSystemTrayNotification" : false,
+   "TrayIconVisibility" : true,
+   "UseProxyServer" : false,
+   "UserInterfaceVisibility" : false,
+   "WarnWhenDefsAreOutOfDate" : true
+}

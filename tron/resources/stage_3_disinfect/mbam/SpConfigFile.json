@@ -1,0 +1,272 @@
+A34463E8C3C74230ED9705394C1CEFEDCEAC256E9B3E791132C150DE1BB9598A
+{
+   "driverState" : true,
+   "installed" : false,
+   "protectedItems" : [
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\CLSID\\{03141A2A-5C3A-458E-ABEC-0812AD7FF497}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\CLSID\\{11D1E5E8-14E1-4B5B-AE1A-2678CB91E8E5}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\CLSID\\{130CD414-6BFD-4F6C-9362-A2264B222E76}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\CLSID\\{17BE78EE-B40A-4B9E-835F-38EC62F9D479}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\CLSID\\{251AD013-20AD-4C3F-8FE2-F66A429B4819}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\CLSID\\{278637DA-FDFB-45C7-8CD8-F2D8A9199AB0}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\CLSID\\{36A65E46-6CC1-4CA2-B51E-F4DD8C993DDC}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\CLSID\\{376BE474-56D4-4177-BB4E-5610156F36C8}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\CLSID\\{57CE581A-0CB6-4266-9CA0-19364C90A0B3}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\CLSID\\{580243BF-3CEE-4131-A599-C6FED66BEB1B}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\CLSID\\{8F1C46F8-E697-4175-B240-CDE682A4BA2D}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\CLSID\\{9D372F21-E6DA-4B82-881A-79F6CA6B6AE1}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\CLSID\\{BF474111-9116-45C6-AF53-209E64F1BB53}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\CLSID\\{D5599B6B-FA0C-45B5-8309-853B003EA412}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\CLSID\\{DE03E614-112D-43E0-8E15-E7236CC32108}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\CLSID\\{E1AC7139-D1FF-4DE9-84A4-92E2B47F5D2A}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\CLSID\\{EE8A9269-9E6E-4683-BCD3-41E9B16696DC}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\CLSID\\{F36AD0D0-B5F0-4C69-AF08-603D177FEF0E}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\CLSID\\{F415899A-1576-4C8B-BC9F-4854781F8A20}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\CLSID\\{F6D29500-933C-447C-9D88-9D814AF73808}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\TYPELIB\\{0E2822AB-0447-4F28-AF4C-FFDB1E8595AE}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\TYPELIB\\{226C1698-A075-4315-BB5D-9C164A96ACE7}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\TYPELIB\\{2446F405-83F0-460F-B837-F04540BB330C}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\TYPELIB\\{332AFEBA-9341-4CEC-8EA6-DB155A99DF63}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\TYPELIB\\{49F6AC60-2104-42C6-8F71-B3916D5AA732}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\TYPELIB\\{5709DEEB-F05E-4D5C-8DC4-3B0D924EE08F}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\TYPELIB\\{59DBD1B8-A7BD-4322-998F-41B0D2516FA0}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\TYPELIB\\{74630AE8-C170-4A8F-A90A-F42D63EFE1E8}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\TYPELIB\\{783B187E-360F-419C-B6DA-592892764A01}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\TYPELIB\\{A23C190D-C714-42C7-BDBB-F4E1DE65AF27}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\TYPELIB\\{A82129F1-32E1-4D79-A39F-EBFEE53A70BF}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\TYPELIB\\{AFF1A83B-6C83-4342-8E68-1648DE06CB65}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\TYPELIB\\{C731375E-3199-4C88-8326-9F81D3224DAD}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\TYPELIB\\{F5BCAC7E-75E7-4971-B3F3-B197A510F495}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\CLASSES\\TYPELIB\\{FFB94DF8-FC15-411C-B443-E937085E2AC1}\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\*\\SYSTEMCERTIFICATES\\DISALLOWED\\CERTIFICATES\\B8EBF0E696AF77F51C96DB4D044586E2F4F8FD84",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\*\\SYSTEMCERTIFICATES\\DISALLOWED\\CERTIFICATES\\249BDA38A611CD746A132FA2AF995A2D3C941264",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\*\\SYSTEMCERTIFICATES\\DISALLOWED\\CERTIFICATES\\DBFAD9D59A6A07DCEB004DBE2DC246B547249E86",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\MICROSOFT\\WINDOWS\\CURRENTVERSION\\UNINSTALL\\{35065F43-4BB2-439A-BFF7-0F1014F2E0CD}_IS1\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SYSTEM\\CONTROLSET*\\SERVICES\\EVENTLOG\\APPLICATION\\MBAMSERVICE\\*",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SYSTEM\\CONTROLSET*\\SERVICES\\MBAMSERVICE\\*",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SYSTEM\\CONTROLSET*\\SERVICES\\MBAMPROTECTION\\*",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SYSTEM\\CONTROLSET*\\SERVICES\\MBAMSWISSARMY\\*",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SYSTEM\\CONTROLSET*\\SERVICES\\MBAMFARFLT\\*",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SYSTEM\\CONTROLSET*\\SERVICES\\ESPROTECTIONDRIVER\\*",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SYSTEM\\CONTROLSET*\\SERVICES\\MBAMWEBPROTECTION\\*",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\USER\\*\\SYSTEMCERTIFICATES\\DISALLOWED\\CERTIFICATES\\249BDA38A611CD746A132FA2AF995A2D3C941264",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\USER\\*\\SYSTEMCERTIFICATES\\DISALLOWED\\CERTIFICATES\\B8EBF0E696AF77F51C96DB4D044586E2F4F8FD84",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\USER\\*\\SYSTEMCERTIFICATES\\DISALLOWED\\CERTIFICATES\\DBFAD9D59A6A07DCEB004DBE2DC246B547249E86",
+         "type" : "regkey"
+      },
+      {
+         "path" : "%SYSTEMDRIVE%\\PROGRAMDATA\\MALWAREBYTES\\",
+         "type" : "folder"
+      },
+      {
+         "path" : "%APPDATA%\\MALWAREBYTES\\",
+         "type" : "folder"
+      },
+      {
+         "path" : "%SYSTEMROOT%\\SYSTEM32\\DRIVERS\\MBAM.SYS",
+         "type" : "folder"
+      },
+      {
+         "path" : "%SYSTEMROOT%\\SYSTEM32\\DRIVERS\\MBAMSWISSARMY.SYS",
+         "type" : "folder"
+      },
+      {
+         "path" : "%SYSTEMROOT%\\SYSTEM32\\DRIVERS\\FARFLT.SYS",
+         "type" : "folder"
+      },
+      {
+         "path" : "%SYSTEMROOT%\\SYSTEM32\\DRIVERS\\MBAE.SYS",
+         "type" : "folder"
+      },
+      {
+         "path" : "%SYSTEMROOT%\\SYSTEM32\\DRIVERS\\MBAE64.SYS",
+         "type" : "folder"
+      },
+      {
+         "path" : "%SYSTEMROOT%\\SYSTEM32\\DRIVERS\\MWAC.SYS",
+         "type" : "folder"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\MICROSOFT\\WINDOWS NT\\CURRENTVERSION\\IMAGE FILE EXECUTION OPTIONS\\ASSISTANT.EXE\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\MICROSOFT\\WINDOWS NT\\CURRENTVERSION\\IMAGE FILE EXECUTION OPTIONS\\MALWAREBYTES_ASSISTANT.EXE\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\MICROSOFT\\WINDOWS NT\\CURRENTVERSION\\IMAGE FILE EXECUTION OPTIONS\\MBAM.EXE\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\MICROSOFT\\WINDOWS NT\\CURRENTVERSION\\IMAGE FILE EXECUTION OPTIONS\\MBAMPT.EXE\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\MICROSOFT\\WINDOWS NT\\CURRENTVERSION\\IMAGE FILE EXECUTION OPTIONS\\MBAMSERVICE.EXE\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\MICROSOFT\\WINDOWS NT\\CURRENTVERSION\\IMAGE FILE EXECUTION OPTIONS\\MBAMTRAY.EXE\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\MICROSOFT\\WINDOWS NT\\CURRENTVERSION\\IMAGE FILE EXECUTION OPTIONS\\MBAMWOW.EXE\\",
+         "type" : "regkey"
+      },
+      {
+         "path" : "\\REGISTRY\\MACHINE\\SOFTWARE\\MICROSOFT\\WINDOWS NT\\CURRENTVERSION\\IMAGE FILE EXECUTION OPTIONS\\MBAMWSC.EXE\\",
+         "type" : "regkey"
+      }
+   ],
+   "startMode" : "auto",
+   "userKeys" : [
+
+   ],
+   "verified" : 0
+}

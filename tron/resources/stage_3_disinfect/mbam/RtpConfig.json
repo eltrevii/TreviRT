@@ -1,0 +1,15 @@
+F92EC1A9876BAEC9F121B51FAB84CB535AF7449A0D6384AB6ADF115C245D7147
+{
+   "autoClean" : true,
+   "cacheTime" : 0,
+   "enableShuriken" : true,
+   "licenseExpiredTime" : "1535549801",
+   "protectionState" : "disabled",
+   "pumHandling" : "detect",
+   "pupHandling" : "detect",
+   "rtpExclusions" : [
+
+   ],
+   "totalThreatsDetected" : "0",
+   "wacIntegrationSetting" : "standard"
+}

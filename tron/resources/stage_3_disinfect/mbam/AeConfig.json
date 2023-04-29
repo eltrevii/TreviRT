@@ -1,0 +1,2059 @@
+604DAC3DC02BECAE829C9F2ACB8B9582AB4C8D5F7664AE23CD1C3C2B86EE10F4
+{
+   "AH" : 65,
+   "BASLR" : 66,
+   "Blocked" : "0",
+   "CALLER" : 863,
+   "DAH" : 65,
+   "DEPHDLR" : 0,
+   "DLL" : 591,
+   "FILE" : 65407,
+   "JAVACMD" : 1,
+   "JAVACMD2" : 1,
+   "JAVAIN" : 1,
+   "JAVAINTRANET" : 0,
+   "JAVAOUT" : 0,
+   "JAVASOCK" : 1,
+   "L0DEP" : 587,
+   "L1DEP" : 591,
+   "MSGBOX" : 0,
+   "OFFICE_VBA7" : 2,
+   "OFFICE_WMI" : 2,
+   "PIV" : 863,
+   "PROCESS" : 65535,
+   "ROPC32" : 863,
+   "ROPC64" : 863,
+   "ROPR32" : 0,
+   "ROPR64" : 0,
+   "STK32" : 0,
+   "STK64" : 0,
+   "VB_DISABLE" : 65,
+   "VB_EXEC" : 65,
+   "WPM" : 589,
+   "XMLHTTP" : 65,
+   "defaultExclusions" : [
+      {
+         "date" : "",
+         "hash" : "00A7CF3BAAE095DBFBE458264E5AA649",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "02B0C359F6F66575B8EC10A7002A7EF1",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "034CCADC1C073E4216E9466B720F9849",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "03E0A0812CDD2AD7261EAF533F7761F6",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "03FCFBE2C8E71C60F1BC34EB91D07F99",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "046A78D20889A0B96B84646B2E59729F",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "04E69D16137C2EB4AC353BE3F9EAA1A6",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "0575F6FEEE5E04017D6D38440E144CBF",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "0A903F975BF30F70C36315A3D92A051B",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "0BF90B3A9F703F23A6AD342B5BC01B26",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "0CD4882A36D15DAD767E9D77297289CC",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "0D97759E5A6ABBA62E536D9D3585F04B",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "0FCF9F3D9518B90FB58CC950FA33998C",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "12F83B690D2D67F948186A655DC22528",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "14953FB0442FD7179C36DC126D1E6872",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "158DD7391F408FA1F38685F4EA237455",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "1628E2212724449B8ED5E4773919B139",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "1C5B6815372D0D0EBA9CE18EC2FA9D73",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "1CDF331C2ED30014F81A6B29ECE49A7D",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "1D3774C99A21F023E50F78A11AEC855D",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "20B61524A5A8837DEEC364D03654EA75",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "2162D735507A707E512F5725FFB67C3B",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "2252290BC44BEAD16AA1BF89948472E8",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "23683D629CEA2FC630C790BB18FB99C0",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "23B28530283FC40E2DC554A5271BD188",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "249C1C8BD8AC9568E5C5A0EC2FB39018",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "26A414A2B7FC8AA5475CADB1189F1D02",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "289A45C59B6481D0ADAEBEE52C7C08E8",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "29D9E417ABC7FF2ACADF7111928F02E4",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "2EBF305C037A028D23B54E901A77FC76",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "2FAFB224F30F7F9C718767EDD6018240",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "319B1108E328EDFD5002AB4544E59F43",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "324255A4DEAD441DA3876C055FED22B1",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "3613076AC79608EF1EA26C9193597DAC",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "37651F52CCD3E7DFCAC9747F1F5506BA",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "37666EB6150CF070FA5211D523EDB2DF",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "37945433C7B7D743B863C54A8CB18DEE",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "3BC2A3CCDE0CD62B8C8E05683283A25C",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "3EB1530ECB70951FBF12DBFCF5B6CE3B",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "3F39234D73C420642275B7DC0B1E981C",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "4246B1662DDEE1DF479B99161C46F4FC",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "43DFEB90B3537EA613A1EA823091AA24",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "4896A40C1EB3BF77D726854E4851A086",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "4A9770F61FF364C25E9129DE6A185C4B",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "4AA31094E87BDF320E9DDFE0AA6ECC76",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "4BD792D4A6B757C133502938C06CAF49",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "4E4682F1E7A6B6846E0F99612FC41D06",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "4EE24C7FD67B098431C951DB7686BD19",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "4F5BD8D491AAE778B358ECE2A1D28F09",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "4F9C97AD03B3CF13EB4C519CED9A12BB",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "50754352847B5E71E11ABF4D30407148",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "53560C9205CD9A362F10CDDAD91BF7BD",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "535C0EA5CF6FF5105F6D297FADF160E1",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "5396A1EF484F7102A1B708B4AC529913",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "55293D6D1DB05E4800F2B62407D61DD7",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "55ED4864C1D3F6357D9FAFCB4CA09FA8",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "5782294B0D5B4436EB1E2435C587FC1C",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "57BF209A6EE8A9512D4E1A36DFA367EB",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "5E1085CBCF2C80C31CC4EC059C1AC8B3",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "5F17AFF764132A9B74C07704E4C177A7",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "6013B3F1FEA8ED5FEF3194B63A486FB4",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "61DD816FA1B04FA5AAA5A78A287DFA8E",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "62700FECE4F259431CBA8250B6500C24",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "65133DA829359A4E4079D965D05BA5BF",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "65ADDEAC93565EE7C20309E591463006",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "681343E00D266C5F811320FCA9054370",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "68FCEB727572063A0336ACFB449AFBD4",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "695E786411F533045D9FE5A31E3EED75",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "6A5C2E41065737C5842F4D84FB89FC5A",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "6B912966E17C324FF6B37F647FFF4CF5",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "6FF1259AB056E29564406A4C07A47403",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "7316EAA172DE588080F19387813829E7",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "75A3E359FBBCC3F88A8775D95ACB9E26",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "7685248592B310F0EB9874170FC6E993",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "76AA78F96108AAA7BFDA1542C5550984",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "76CDC6433506FAA8D0D7A95A3798C6BD",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "77D4C7979D0D5D82FA58E669808476C4",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "7B298EFA16AC68E6E9BB02C8D34B9114",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "826E5391047A722101D48870DE03374B",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "839C447BAC2FD43C2DCC2E32B7904D13",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "8643B277423F05B8A34775E93B8B7ABC",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "866141918B06220D456284430B9A6B5C",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "87388AD2BDA1A2B37CC7396125E4965B",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "8839166DCDD9F264639A0946B3D4378B",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "884C8A04A6B075B5E794710644A703C6",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "8A14C7DDFC299934ACAB1F4F8BFB8E9E",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "938AD48B215D52565829B7A163045D5E",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "9496AC83CA3496984B562932A814A237",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "95C8BFE19202785B2AA1A73BA014911B",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "97776CFD9C89D06B57BD624FFF690002",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "97F9399DD616DF9A2B54A05B2859DBE6",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "9B9A3CC9D0DBC66C129960A55256DD27",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "9D8274B19C6F4B3E21E12DE6E378F462",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "9EA1947855C8A6F1AE1CF3D2E07AF238",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "9F4BC88598BC55A5603137E2A9602B11",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "9F7A1813A801D286EC3191FD53B428B8",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "9FEF04A50F79295C036CF000B0366EF8",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "A062AB670FFBE6E69C9F6F0E574CA4A5",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "A53761C54221EECEA9421AECD225F9D5",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "A7C34601340F9ED6CB2CECA7A34B4BF2",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "AAA404400F755D066E74A792D221500C",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "ADB48BF471D66FC349D2893813FD998A",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "AE0C754DDE736308D29E791760B0CB6E",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "AFFD149999E57E41A876C47F1AC9AC87",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "B44C0B2AEEB3334C780A9725DC945EA6",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "B4688EDAB86010BD1996F0B25DFD97A9",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "B8C997E772BE343E1664FEE14C1FB9B7",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "BA87291DEA637E2F1830AFD92530DE32",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "BCCA302522B7E247DD128A78D9B20F94",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "BE8981EEB84FD419661C6A441568750C",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "BE9F5E3DC4539B71B1858AC66C81F789",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "BF3F290275C21BDD3951955C9C3CF32C",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "BFDE31D521AC2796BA2D75D1F7086F08",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "C0CFA6F0289AF556EF6C34E37FE61569",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "C2D2C87649E0315B4356B51498882B37",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "C5C785497A57FC48AB3D11245B90ED09",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "C6D7D3A24AFF72FE4621BA026B098FAB",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "C6EB5353BCA864D949FEEB50810860DF",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "C8E8F12B364C3A7BA45888FBBC474AAA",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "CB3638541DCAC86EE17FA8258202E20E",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "CE21EA5624B75F707D5AD714F39D8196",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "D022DF5629EBA1FDA393E19DC9125D39",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "D0610098E4BD2BB8BB75BCC02B9FDC6F",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "D3AD181D94CDEBF7FD85BF8399B22E21",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "D4E1305A4BD1FAD809C450DEBBD4F515",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "D736D938B0059F61CDABE02E7676CAA2",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "D79108C6128A2C93E42A77F88C2F6D16",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "D9591620780EA176327838FD7BF3BB15",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "D9BF61FE2AADDE81475F13E9819124C1",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "DB6754154DF5E60E19BEA04DBB6774BC",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "DBF5468C0630C890D344BBBC89DAC9D4",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "DC4417AF85AAA8008E2A07741F4CAA61",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "DCBB15DFBC08046AF8D10A1135FFA423",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "DD7B83919ED3F5C6CF4C343A79D6E7BC",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "E2DAF5C1532187F67F067F0342B74B9B",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "E511F8508F13FA0C9F99B0C527DDF89B",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "E643900BB6FC3D452CAB0B9ADB28418C",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "E9A9367D47B9065701E7C99E4CFCB36A",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "EB9D5656688B51ABC5CBA1E6CA8E0CFC",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "EE60596A12B7FB9E69FD0D55C28BC875",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "F07B83D22A9F2784272C27AE4F1F50BA",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "F195807A46C284971D8395C61328AB7D",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "F4A75777861DF84C3068513358D464A1",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "F5DC2AE9B6EFF70C6D1A7377ED658049",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "F65BC9B3BE62DACD657C8BDB1CA14224",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "F675F4ED4364D11C4CB967F1B4C238EB",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "F7515F67CB096DC981AE91221A7C67E6",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "F78940628EB76AB6E654C19EE33F2F89",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "F7CB4D481C03004496EFEA76120EC85E",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "F9388BFB46D2A30A965EED6B5A62A7A6",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "FAEB00C5A6CCF790652CB591303DABDE",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "FFE48CD06F760596EC6C98460819EE34",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "7E3F50AFA690166BEE17904BAB1E01C0",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "2E02156CFEAAF70141F91B894C770AC8",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "CACC3702B61A1E75ECF7020343D41DBE",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "E4A2856522E6A817E3F0EDD2677FA647",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "CA0C67BA7AEBA6AED5DDB852E6EEA811",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "088ed8bbd1a2b05eb466459aa68c3ec6",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "9E735F008AE8D32184AF78D39ABB67B3",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "c8b03a37c2320287962f81df3eb215aa",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "050E6DDC48FDCD458ABCAC2A60D96757",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "74a57b2ec648a4f655c72e93ffa58c92",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "1554d7e3382a5fb0b5499eea319a85df",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "6cfb336bff524a652f87f9897c09b224",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "0D7D8A7525E7F5F5A09F5CD04C01AB94",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "C29DB9881259C2EB9877E0B95E2C4122",
+         "id" : "",
+         "path" : ""
+      },
+      {
+         "date" : "",
+         "hash" : "5b4d63670c3edafd876c688a4344027a",
+         "id" : "",
+         "path" : ""
+      }
+   ],
+   "dynconfig" : [
+      {
+         "configValue" : [
+            {
+               "aeOption" : 5,
+               "mask" : 1,
+               "value" : 0
+            },
+            {
+               "aeOption" : 10,
+               "mask" : 521,
+               "value" : 0
+            },
+            {
+               "aeOption" : 13,
+               "mask" : 521,
+               "value" : 0
+            }
+         ],
+         "objectType" : "folder",
+         "objectValue" : "C:\\Program Files\\Diebold\\Warsaw"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 5,
+               "mask" : 1,
+               "value" : 0
+            },
+            {
+               "aeOption" : 10,
+               "mask" : 521,
+               "value" : 0
+            },
+            {
+               "aeOption" : 13,
+               "mask" : 521,
+               "value" : 0
+            }
+         ],
+         "objectType" : "folder",
+         "objectValue" : "C:\\Program Files (x86)\\GbPlugin"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 5,
+               "mask" : 1,
+               "value" : 0
+            },
+            {
+               "aeOption" : 10,
+               "mask" : 521,
+               "value" : 0
+            },
+            {
+               "aeOption" : 13,
+               "mask" : 521,
+               "value" : 0
+            }
+         ],
+         "objectType" : "folder",
+         "objectValue" : "C:\\ProgramData\\GAS Tecnologia"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 5,
+               "mask" : 1,
+               "value" : 0
+            },
+            {
+               "aeOption" : 10,
+               "mask" : 521,
+               "value" : 0
+            },
+            {
+               "aeOption" : 13,
+               "mask" : 521,
+               "value" : 0
+            }
+         ],
+         "objectType" : "folder",
+         "objectValue" : "C:\\ProgramData\\GbPlugin"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 5,
+               "mask" : 1,
+               "value" : 0
+            },
+            {
+               "aeOption" : 10,
+               "mask" : 521,
+               "value" : 0
+            },
+            {
+               "aeOption" : 13,
+               "mask" : 521,
+               "value" : 0
+            }
+         ],
+         "objectType" : "folder",
+         "objectValue" : "C:\\Program Files\\GbPlugin"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 5,
+               "mask" : 1,
+               "value" : 0
+            }
+         ],
+         "objectType" : "file",
+         "objectValue" : "C:\\Windows\\winipbin\\svrltmgr.dll"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 2,
+               "mask" : 513,
+               "value" : 0
+            }
+         ],
+         "objectType" : "folder",
+         "objectValue" : "C:\\Program Files (x86)\\Imprivata\\OneSign Agent"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 2,
+               "mask" : 513,
+               "value" : 0
+            }
+         ],
+         "objectType" : "folder",
+         "objectValue" : "C:\\Program Files\\Imprivata\\OneSign Agent"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 3,
+               "mask" : 2,
+               "value" : 0
+            }
+         ],
+         "objectType" : "file",
+         "objectValue" : "C:\\Program Files\\Manufacturer\\Endpoint Agent\\clpbm.dll"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 3,
+               "mask" : 2,
+               "value" : 0
+            }
+         ],
+         "objectType" : "file",
+         "objectValue" : "C:\\Program Files (x86)\\Manufacturer\\Endpoint Agent\\clpbm.dll"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 6,
+               "mask" : 1,
+               "value" : 0
+            }
+         ],
+         "objectType" : "folder",
+         "objectValue" : "C:\\Program Files (x86)\\Manufacturer\\Endpoint Agent"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 6,
+               "mask" : 1,
+               "value" : 0
+            }
+         ],
+         "objectType" : "folder",
+         "objectValue" : "C:\\Program Files\\Manufacturer\\Endpoint Agent"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 6,
+               "mask" : 1,
+               "value" : 0
+            }
+         ],
+         "objectType" : "folder",
+         "objectValue" : "C:\\Program Files (x86)\\Symantec\\Symantec Endpoint Protection"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 6,
+               "mask" : 1,
+               "value" : 0
+            }
+         ],
+         "objectType" : "folder",
+         "objectValue" : "C:\\Program Files\\Symantec\\Symantec Endpoint Protection"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 5,
+               "mask" : 1,
+               "value" : 0
+            }
+         ],
+         "objectType" : "module",
+         "objectValue" : "csvrelay32.dll"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 16,
+               "mask" : 2,
+               "value" : 0
+            }
+         ],
+         "objectType" : "module",
+         "objectValue" : "a2hooks64.dll"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 16,
+               "mask" : 2,
+               "value" : 0
+            }
+         ],
+         "objectType" : "module",
+         "objectValue" : "a2hooks32.dll"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 6,
+               "mask" : 1,
+               "value" : 0
+            }
+         ],
+         "objectType" : "folder",
+         "objectValue" : "C:\\Program Files\\Bitdefender Antivirus Free"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 6,
+               "mask" : 1,
+               "value" : 0
+            }
+         ],
+         "objectType" : "folder",
+         "objectValue" : "C:\\Program Files\\Bitdefender"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 6,
+               "mask" : 1,
+               "value" : 0
+            }
+         ],
+         "objectType" : "folder",
+         "objectValue" : "C:\\Program Files\\Bitdefender Agent"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 10,
+               "mask" : 1,
+               "value" : 0
+            },
+            {
+               "aeOption" : 13,
+               "mask" : 1,
+               "value" : 0
+            },
+            {
+               "aeOption" : 16,
+               "mask" : 1,
+               "value" : 0
+            }
+         ],
+         "objectType" : "folder",
+         "objectValue" : "C:\\Program Files (x86)\\Trusteer"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 10,
+               "mask" : 1,
+               "value" : 0
+            },
+            {
+               "aeOption" : 13,
+               "mask" : 1,
+               "value" : 0
+            },
+            {
+               "aeOption" : 16,
+               "mask" : 1,
+               "value" : 0
+            }
+         ],
+         "objectType" : "folder",
+         "objectValue" : "C:\\Program Files\\Trusteer"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 16,
+               "mask" : 2,
+               "value" : 0
+            }
+         ],
+         "objectType" : "folder",
+         "objectValue" : "C:\\Program Files\\think-cell"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 16,
+               "mask" : 2,
+               "value" : 0
+            }
+         ],
+         "objectType" : "folder",
+         "objectValue" : "C:\\Program Files (x86)\\think-cell"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 10,
+               "mask" : 4,
+               "value" : 0
+            },
+            {
+               "aeOption" : 13,
+               "mask" : 4,
+               "value" : 0
+            }
+         ],
+         "objectType" : "folder",
+         "objectValue" : "C:\\Program Files (x86)\\Mirillis"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 10,
+               "mask" : 4,
+               "value" : 0
+            },
+            {
+               "aeOption" : 13,
+               "mask" : 4,
+               "value" : 0
+            }
+         ],
+         "objectType" : "folder",
+         "objectValue" : "C:\\Program Files\\Mirillis"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 11,
+               "mask" : 1,
+               "value" : 0
+            },
+            {
+               "aeOption" : 14,
+               "mask" : 1,
+               "value" : 0
+            }
+         ],
+         "objectType" : "folder",
+         "objectValue" : "C:\\Program Files (x86)\\Mozilla Firefox"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 11,
+               "mask" : 1,
+               "value" : 0
+            },
+            {
+               "aeOption" : 14,
+               "mask" : 1,
+               "value" : 0
+            }
+         ],
+         "objectType" : "folder",
+         "objectValue" : "C:\\Program Files\\Mozilla Firefox"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 8,
+               "mask" : 2,
+               "value" : 0
+            }
+         ],
+         "objectType" : "module",
+         "objectValue" : "Swissarmy.dll"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 16,
+               "mask" : 2,
+               "value" : 0
+            }
+         ],
+         "objectType" : "module",
+         "objectValue" : "tmmon.dll"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 8,
+               "mask" : 2,
+               "value" : 0
+            }
+         ],
+         "objectType" : "module",
+         "objectValue" : "mbae.dll"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 8,
+               "mask" : 2,
+               "value" : 0
+            }
+         ],
+         "objectType" : "folder",
+         "objectValue" : "C:\\Program Files (x86)\\Malwarebytes Anti-Exploit"
+      },
+      {
+         "configValue" : [
+            {
+               "aeOption" : 8,
+               "mask" : 2,
+               "value" : 0
+            }
+         ],
+         "objectType" : "folder",
+         "objectValue" : "C:\\Program Files\\Malwarebytes Anti-Exploit"
+      }
+   ],
+   "dynconfigVersion" : 0,
+   "engineApiConfig" : [
+
+   ],
+   "exclusionsVersion" : 0,
+   "exploitFiles" : [
+
+   ],
+   "protectedApps" : [
+      {
+         "AppDisplayName" : "winrar",
+         "AppId" : "1E2880DE-B51B-4680-AC4A-B134BC7BBC1B",
+         "FamilyID" : 1024,
+         "FileName" : "winrar.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "winzip",
+         "AppId" : "22BDABD2-B11C-49C9-A36D-A09155018CBC",
+         "FamilyID" : 1024,
+         "FileName" : "winzip.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "7z",
+         "AppId" : "422E92DE-2DA0-450F-954F-29B9FD54E1CA",
+         "FamilyID" : 1024,
+         "FileName" : "7z.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "7zFM",
+         "AppId" : "19A73B9E-B29E-4780-88AF-66CDE57B9EEE",
+         "FamilyID" : 1024,
+         "FileName" : "7zFM.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "7zG",
+         "AppId" : "840D9666-9E1C-4C75-8A44-539BD1E35866",
+         "FamilyID" : 1024,
+         "FileName" : "7zG.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "S7Z",
+         "AppId" : "842CA774-45A0-414F-B82C-CBA6FFCB5120",
+         "FamilyID" : 1024,
+         "FileName" : "S7Z.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "7zextractor",
+         "AppId" : "B30E680C-E5DC-4DE7-8366-4781094E4A21",
+         "FamilyID" : 1024,
+         "FileName" : "7zextractor.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Winzip32",
+         "AppId" : "8E365AD3-8E8B-4379-90E2-72D457EE3144",
+         "FamilyID" : 1024,
+         "FileName" : "Winzip32.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Winzip64",
+         "AppId" : "7360668C-EDC2-47DC-9008-5418ED866E03",
+         "FamilyID" : 1024,
+         "FileName" : "Winzip64.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "wzdisktools",
+         "AppId" : "80C3B7F1-A1F8-4400-83C2-C67D557A7240",
+         "FamilyID" : 1024,
+         "FileName" : "wzdisktools.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "winzipss",
+         "AppId" : "0DD44506-8379-49BA-9652-23E8D74EB3DA",
+         "FamilyID" : 1024,
+         "FileName" : "winzipss.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "cmd",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264300",
+         "FamilyID" : 128,
+         "FileName" : "cmd.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "mshta",
+         "AppId" : "64B028EB-F36C-4111-852C-E04C2FB744E7",
+         "FamilyID" : 128,
+         "FileName" : "mshta.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Windows Help",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264301",
+         "FamilyID" : 16,
+         "FileName" : "winhlp32.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Windows Script Host",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264302",
+         "FamilyID" : 16,
+         "FileName" : "wscript.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "QuickTime Player",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264303",
+         "FamilyID" : 4,
+         "FileName" : "quicktimeplayer.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Winamp Player",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264304",
+         "FamilyID" : 4,
+         "FileName" : "winamp.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "VLC Player",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264305",
+         "FamilyID" : 4,
+         "FileName" : "vlc.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Windows Media Player (mplayer2)",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264306",
+         "FamilyID" : 4,
+         "FileName" : "mplayer2.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Windows Media Player (wmplayer)",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264307",
+         "FamilyID" : 4,
+         "FileName" : "wmplayer.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Microsoft Office PowerPoint",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264308",
+         "FamilyID" : 2,
+         "FileName" : "powerpnt.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Microsoft Office Excel",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264309",
+         "FamilyID" : 2,
+         "FileName" : "excel.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Microsoft Office Excel",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F6826430A",
+         "FamilyID" : 2,
+         "FileName" : "excelc.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Microsoft Office Word",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F6826430B",
+         "FamilyID" : 2,
+         "FileName" : "winword.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Microsoft Office Word",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F6826430C",
+         "FamilyID" : 2,
+         "FileName" : "winwordc.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Microsoft Office Publisher",
+         "AppId" : "EDC1090B-6722-4B97-9C1E-A0637C9297F2",
+         "FamilyID" : 2,
+         "FileName" : "mspub.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Microsoft Equation Editor",
+         "AppId" : "17088910-AD3F-4227-8AAA-6DBE0ED86427",
+         "FamilyID" : 2,
+         "FileName" : "eqnedt32.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "LibreOffice",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F6826430D",
+         "FamilyID" : 2,
+         "FileName" : "soffice.bin",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Foxit Reader",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F6826430E",
+         "FamilyID" : 8,
+         "FileName" : "foxitreader.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Foxit Reader",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F6826430F",
+         "FamilyID" : 8,
+         "FileName" : "foxit reader.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Foxit Phantom",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264310",
+         "FamilyID" : 8,
+         "FileName" : "Foxit PhantomPDF.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Foxit Phantom",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264311",
+         "FamilyID" : 8,
+         "FileName" : "FoxitPhantomPDF.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Adobe Reader",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264312",
+         "FamilyID" : 8,
+         "FileName" : "acrord32.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Adobe Acrobat",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264313",
+         "FamilyID" : 8,
+         "FileName" : "acrobat.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Java",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264314",
+         "FamilyID" : 32,
+         "FileName" : "java.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Java",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264315",
+         "FamilyID" : 32,
+         "FileName" : "javaw.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Java",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264316",
+         "FamilyID" : 32,
+         "FileName" : "javaws.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Comodo Dragon",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264317",
+         "FamilyID" : 512,
+         "FileName" : "dragon.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Waterfox",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264318",
+         "FamilyID" : 1,
+         "FileName" : "waterfox.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Tor Browser",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264319",
+         "FamilyID" : 1,
+         "FileName" : "tor.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Tor Browser",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F6826431A",
+         "FamilyID" : 1,
+         "FileName" : "tbb-firefox.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Palemoon",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F6826431B",
+         "FamilyID" : 1,
+         "FileName" : "palemoon.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Cyberfox",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F6826431C",
+         "FamilyID" : 1,
+         "FileName" : "cyberfox.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "IceDragon",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F6826431D",
+         "FamilyID" : 1,
+         "FileName" : "icedragon.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Seamonkey",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F6826431E",
+         "FamilyID" : 1,
+         "FileName" : "seamonkey.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Maxthon",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F6826431F",
+         "FamilyID" : 1,
+         "FileName" : "maxthon.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Maxthon",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264320",
+         "FamilyID" : 1,
+         "FileName" : "mxapploader.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Opera (and plug-ins)",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264321",
+         "FamilyID" : 512,
+         "FileName" : "opera.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Opera (and plug-ins)",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264322",
+         "FamilyID" : 512,
+         "FileName" : "opera_plugin_wrapper.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Opera (and plug-ins)",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264323",
+         "FamilyID" : 512,
+         "FileName" : "opera_wrapper_32.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Internet Explorer (and add-ons)",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264324",
+         "FamilyID" : 1,
+         "FileName" : "iexplore.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Microsoft Edge (and add-ons)",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264325",
+         "FamilyID" : 1,
+         "FileName" : "MicrosoftEdge.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Microsoft Edge (and add-ons)",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264326",
+         "FamilyID" : 1,
+         "FileName" : "MicrosoftEdgeCP.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Google Chrome (and plug-ins)",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264327",
+         "FamilyID" : 512,
+         "FileName" : "chrome.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Google Chrome (and plug-ins)",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264328",
+         "FamilyID" : 512,
+         "FileName" : "old_chrome.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Mozilla Firefox (and add-ons)",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F68264329",
+         "FamilyID" : 1,
+         "FileName" : "firefox.exe",
+         "Hidden" : false,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Mozilla Firefox (and add-ons)",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F6826432A",
+         "FamilyID" : 1,
+         "FileName" : "plugin-container.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Mozilla Firefox (and add-ons)",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F6826432B",
+         "FamilyID" : 1,
+         "FileName" : "FlashPlayerPlugin*.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Microsoft Help and Support Center",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F6826432C",
+         "FamilyID" : 16,
+         "FileName" : "helpctr.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "FLTLDR",
+         "AppId" : "5B8B37A4-4EB6-402F-A5CA-37E17B2D42C9",
+         "FamilyID" : 256,
+         "FileName" : "fltldr.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      },
+      {
+         "AppDisplayName" : "Malwarebytes Anti-Exploit Test",
+         "AppId" : "04657AB6-7CE0-4DB8-A183-C82F6826432D",
+         "FamilyID" : 64,
+         "FileName" : "mbae-test.exe",
+         "Hidden" : true,
+         "Shielded" : true,
+         "UserApp" : false
+      }
+   ],
+   "protectionState" : "disabled",
+   "systemExclusions" : [
+
+   ],
+   "userExclusions" : [
+
+   ]
+}

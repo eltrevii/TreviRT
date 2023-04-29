@@ -1,0 +1,31 @@
+FE3EFC7CAD879FD9038B2D3234719A6B5F357F656EA43E97EA656EC0BFF025AB
+{
+   "ae_dynconfig_version" : "0.0.1",
+   "ae_exclusions_version" : "0.0.1",
+   "auto_update_interval" : 1440,
+   "beta_opt_in" : false,
+   "channel" : "release",
+   "controllers_version" : "1.0.421",
+   "db_pub_date" : "1535566000",
+   "db_update_time" : "2018-08-29T20:13:45Z",
+   "db_version" : "2018.08.29.07",
+   "dbcls_pkg_version" : "1.0.6557",
+   "enable_auto_update_dbcls" : true,
+   "enable_auto_update_sdkctlr" : true,
+   "force_full_update" : false,
+   "installer_update_pending" : false,
+   "installer_version" : "3.5.1",
+   "max_incremental_updates" : 8,
+   "messages" : [
+
+   ],
+   "min_DB_age" : -1,
+   "pending_installer_path" : "",
+   "pending_installer_version" : "",
+   "pending_sdkctlr_path" : "",
+   "pending_sdkctlr_sha256" : "",
+   "pending_sdkctlr_version" : "",
+   "prev_program_version" : "3.5.1",
+   "sdkctlr_update_pending" : false,
+   "use_staging" : false
+}

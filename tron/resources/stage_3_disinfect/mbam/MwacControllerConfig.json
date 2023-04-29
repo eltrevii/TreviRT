@@ -1,0 +1,75 @@
+53FD64698425069E40F704B78C4F87FCA24EFCD53687F3582A0CA2982E9BF17C
+{
+   "allowlists" : [
+      {
+         "handle" : 26500,
+         "listname" : "ipallowlist",
+         "state" : "Active",
+         "type" : "IP"
+      },
+      {
+         "handle" : 19169,
+         "listname" : "domainallowlist",
+         "state" : "Active",
+         "type" : "Domain"
+      },
+      {
+         "handle" : 15724,
+         "listname" : "processallowlist",
+         "state" : "Active",
+         "type" : "ProcessPath"
+      }
+   ],
+   "blocklists" : [
+      {
+         "handle" : 41,
+         "listname" : "ipblocklist",
+         "state" : "Active",
+         "type" : "IP"
+      },
+      {
+         "handle" : 18467,
+         "listname" : "domainblocklist",
+         "state" : "Active",
+         "type" : "Domain"
+      },
+      {
+         "handle" : 6334,
+         "listname" : "processblocklist",
+         "state" : "Active",
+         "type" : "ProcessPath"
+      }
+   ],
+   "blockpage" : "https:\/\/block.malwarebytes.com",
+   "browserOnlyProtection" : false,
+   "channel" : "release",
+   "domainblockcount" : 0,
+   "exclusiveblocklists" : [
+      {
+         "handle" : 0,
+         "listname" : "exclusiveipblocklist",
+         "state" : "Inactive",
+         "type" : "IP"
+      },
+      {
+         "handle" : 0,
+         "listname" : "exclusivedomainblocklist",
+         "state" : "Inactive",
+         "type" : "Domain"
+      },
+      {
+         "handle" : 0,
+         "listname" : "exclusiveprocessblocklist",
+         "state" : "Inactive",
+         "type" : "ProcessPath"
+      }
+   ],
+   "ipblockcount" : 0,
+   "mwacexclusions" : [
+
+   ],
+   "processblockcount" : 0,
+   "protectionState" : "disabled",
+   "totalblockcount" : 0,
+   "useStaging" : false
+}

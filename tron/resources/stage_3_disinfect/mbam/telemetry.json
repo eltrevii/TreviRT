@@ -1,0 +1,566 @@
+DE26C03B90C9216E438139BD95ABA4EC5BFCAEA6C92FED8FEDA2F9501BB7C83F
+{
+   "arw_data" : [
+
+   ],
+   "error_data" : [
+      {
+         "client" : {
+            "build" : "consumer",
+            "caller" : {
+               "name" : "MBAM",
+               "trigger" : "logmsg"
+            },
+            "components" : {
+               "CTLR" : "1.0.421",
+               "DBCLS" : "1.0.6557"
+            },
+            "db_update_timestamp" : "",
+            "program" : "MBAM-C",
+            "version" : "3.5.1.2522"
+         },
+         "event" : {
+            "context_tag" : "MachineID",
+            "file_name" : "d:\\jenkins\\workspace\\n_mbcommon\\src\\mbcommon\\machineid.cpp",
+            "function_name" : "mb::common::system::MachineId::GetHostMachineId2",
+            "line_number" : 294,
+            "log_level" : "WARNING",
+            "message" : "uuid is (03000200-0400-0500-0006-000700080009) bios serial number is(To Be Filled By O.E.M.).",
+            "process_id" : 452,
+            "thread_id" : 320,
+            "time_stamp" : "2018-08-29T13:33:05.688000-07:00"
+         },
+         "header" : {
+            "installation_token" : "unknown",
+            "machine_id" : "d07f97bc7545a6367159c7dbe86b68668bbd7756",
+            "time" : "2018-08-29T13:33:05-07:00"
+         }
+      },
+      {
+         "client" : {
+            "build" : "consumer",
+            "caller" : {
+               "name" : "MBAM",
+               "trigger" : "logmsg"
+            },
+            "components" : {
+               "CTLR" : "1.0.421",
+               "DBCLS" : "1.0.6557"
+            },
+            "db_update_timestamp" : "",
+            "program" : "MBAM-C",
+            "version" : "3.5.1.2522"
+         },
+         "event" : {
+            "context_tag" : "MachineID",
+            "file_name" : "c:\\jenkins\\workspace\\n_mbcommon\\src\\mbcommon\\machineid.cpp",
+            "function_name" : "mb::common::system::MachineId::GetHostMachineId2",
+            "line_number" : 294,
+            "log_level" : "WARNING",
+            "message" : "uuid is (03000200-0400-0500-0006-000700080009) bios serial number is(To Be Filled By O.E.M.).",
+            "process_id" : 452,
+            "thread_id" : 6336,
+            "time_stamp" : "2018-08-29T13:33:05.863000-07:00"
+         },
+         "header" : {
+            "installation_token" : "unknown",
+            "machine_id" : "d07f97bc7545a6367159c7dbe86b68668bbd7756",
+            "time" : "2018-08-29T13:33:05-07:00"
+         }
+      },
+      {
+         "client" : {
+            "build" : "consumer",
+            "caller" : {
+               "name" : "MBAM",
+               "trigger" : "logmsg"
+            },
+            "components" : {
+               "CTLR" : "1.0.421",
+               "DBCLS" : "1.0.6557"
+            },
+            "db_update_timestamp" : "",
+            "program" : "MBAM-C",
+            "version" : "3.5.1.2522"
+         },
+         "event" : {
+            "context_tag" : "MBAMChameleon",
+            "file_name" : "fileverify.cpp",
+            "function_name" : "VerifyFile",
+            "line_number" : 720,
+            "log_level" : "ERROR",
+            "message" : "**** Error 0xc000003b returned by ZwCreateFile",
+            "process_id" : 452,
+            "thread_id" : 4316,
+            "time_stamp" : "2018-08-29T13:33:08.409000-07:00"
+         },
+         "header" : {
+            "installation_token" : "hyQxPK8s2LgVTyyEb8P91535573438",
+            "machine_id" : "d07f97bc7545a6367159c7dbe86b68668bbd7756",
+            "time" : "2018-08-29T13:33:08-07:00"
+         }
+      },
+      {
+         "client" : {
+            "build" : "consumer",
+            "caller" : {
+               "name" : "MBAM",
+               "trigger" : "logmsg"
+            },
+            "components" : {
+               "CTLR" : "1.0.421",
+               "DBCLS" : "1.0.6557"
+            },
+            "db_update_timestamp" : "",
+            "program" : "MBAM-C",
+            "version" : "3.5.1.2522"
+         },
+         "event" : {
+            "context_tag" : "MBAMChameleon",
+            "file_name" : "fileverify.cpp",
+            "function_name" : "VerifyFile",
+            "line_number" : 720,
+            "log_level" : "ERROR",
+            "message" : "**** Error 0xc000003b returned by ZwCreateFile",
+            "process_id" : 452,
+            "thread_id" : 4316,
+            "time_stamp" : "2018-08-29T13:33:08.409000-07:00"
+         },
+         "header" : {
+            "installation_token" : "hyQxPK8s2LgVTyyEb8P91535573438",
+            "machine_id" : "d07f97bc7545a6367159c7dbe86b68668bbd7756",
+            "time" : "2018-08-29T13:33:08-07:00"
+         }
+      },
+      {
+         "client" : {
+            "build" : "consumer",
+            "caller" : {
+               "name" : "MBAM",
+               "trigger" : "logmsg"
+            },
+            "components" : {
+               "CTLR" : "1.0.421",
+               "DBCLS" : "1.0.6557"
+            },
+            "db_update_timestamp" : "",
+            "program" : "MBAM-C",
+            "version" : "3.5.1.2522"
+         },
+         "event" : {
+            "context_tag" : "MBAMChameleon",
+            "file_name" : "fileverify.cpp",
+            "function_name" : "VerifyFile",
+            "line_number" : 720,
+            "log_level" : "ERROR",
+            "message" : "**** Error 0xc000003b returned by ZwCreateFile",
+            "process_id" : 452,
+            "thread_id" : 4316,
+            "time_stamp" : "2018-08-29T13:33:11.236000-07:00"
+         },
+         "header" : {
+            "installation_token" : "hyQxPK8s2LgVTyyEb8P91535573438",
+            "machine_id" : "d07f97bc7545a6367159c7dbe86b68668bbd7756",
+            "time" : "2018-08-29T13:33:11-07:00"
+         }
+      },
+      {
+         "client" : {
+            "build" : "consumer",
+            "caller" : {
+               "name" : "MBAM",
+               "trigger" : "logmsg"
+            },
+            "components" : {
+               "CTLR" : "1.0.421",
+               "DBCLS" : "1.0.6557"
+            },
+            "db_update_timestamp" : "",
+            "program" : "MBAM-C",
+            "version" : "3.5.1.2522"
+         },
+         "event" : {
+            "context_tag" : "MBAMChameleon",
+            "file_name" : "fileverify.cpp",
+            "function_name" : "VerifyFile",
+            "line_number" : 720,
+            "log_level" : "ERROR",
+            "message" : "**** Error 0xc000003b returned by ZwCreateFile",
+            "process_id" : 452,
+            "thread_id" : 4316,
+            "time_stamp" : "2018-08-29T13:33:11.236000-07:00"
+         },
+         "header" : {
+            "installation_token" : "hyQxPK8s2LgVTyyEb8P91535573438",
+            "machine_id" : "d07f97bc7545a6367159c7dbe86b68668bbd7756",
+            "time" : "2018-08-29T13:33:11-07:00"
+         }
+      },
+      {
+         "client" : {
+            "build" : "consumer",
+            "caller" : {
+               "name" : "MBAM",
+               "trigger" : "logmsg"
+            },
+            "components" : {
+               "CTLR" : "1.0.421",
+               "DBCLS" : "1.0.6557"
+            },
+            "db_update_timestamp" : "",
+            "program" : "MBAM-C",
+            "version" : "3.5.1.2522"
+         },
+         "event" : {
+            "context_tag" : "MachineID",
+            "file_name" : "c:\\jenkins\\workspace\\n_mbcommon\\src\\mbcommon\\machineid.cpp",
+            "function_name" : "mb::common::system::MachineId::GetHostMachineId2",
+            "line_number" : 294,
+            "log_level" : "WARNING",
+            "message" : "uuid is (03000200-0400-0500-0006-000700080009) bios serial number is(To Be Filled By O.E.M.).",
+            "process_id" : 452,
+            "thread_id" : 5532,
+            "time_stamp" : "2018-08-29T13:33:14.199000-07:00"
+         },
+         "header" : {
+            "installation_token" : "hyQxPK8s2LgVTyyEb8P91535573438",
+            "machine_id" : "d07f97bc7545a6367159c7dbe86b68668bbd7756",
+            "time" : "2018-08-29T13:33:14-07:00"
+         }
+      },
+      {
+         "client" : {
+            "build" : "consumer",
+            "caller" : {
+               "name" : "MBAM",
+               "trigger" : "logmsg"
+            },
+            "components" : {
+               "CTLR" : "1.0.421",
+               "DBCLS" : "1.0.6557"
+            },
+            "db_update_timestamp" : "",
+            "program" : "MBAM-C",
+            "version" : "3.5.1.2522"
+         },
+         "event" : {
+            "context_tag" : "UpdateControllerCOM",
+            "file_name" : "..\\PoliciesControllerCOM\\PoliciesControllerEventsSink.cpp",
+            "function_name" : "mb::policiescontroller::PoliciesControllerEventsSink::ConfigOptionChanged",
+            "line_number" : 351,
+            "log_level" : "ERROR",
+            "message" : "Invalid policy config option 20",
+            "process_id" : 452,
+            "thread_id" : 8408,
+            "time_stamp" : "2018-08-29T13:35:21.677000-07:00"
+         },
+         "header" : {
+            "installation_token" : "hyQxPK8s2LgVTyyEb8P91535573438",
+            "machine_id" : "d07f97bc7545a6367159c7dbe86b68668bbd7756",
+            "time" : "2018-08-29T13:35:21-07:00"
+         }
+      },
+      {
+         "client" : {
+            "build" : "consumer",
+            "caller" : {
+               "name" : "MBAM",
+               "trigger" : "logmsg"
+            },
+            "components" : {
+               "CTLR" : "1.0.421",
+               "DBCLS" : "1.0.6557"
+            },
+            "db_update_timestamp" : "",
+            "program" : "MBAM-C",
+            "version" : "3.5.1.2522"
+         },
+         "event" : {
+            "context_tag" : "TelemController",
+            "file_name" : "..\\PoliciesControllerCOM\\PoliciesControllerEventsSink.cpp",
+            "function_name" : "mb::policiescontroller::PoliciesControllerEventsSink::ConfigOptionChanged",
+            "line_number" : 351,
+            "log_level" : "ERROR",
+            "message" : "Invalid policy config option 20",
+            "process_id" : 452,
+            "thread_id" : 8408,
+            "time_stamp" : "2018-08-29T13:35:21.677000-07:00"
+         },
+         "header" : {
+            "installation_token" : "hyQxPK8s2LgVTyyEb8P91535573438",
+            "machine_id" : "d07f97bc7545a6367159c7dbe86b68668bbd7756",
+            "time" : "2018-08-29T13:35:21-07:00"
+         }
+      },
+      {
+         "client" : {
+            "build" : "consumer",
+            "caller" : {
+               "name" : "MBAM",
+               "trigger" : "logmsg"
+            },
+            "components" : {
+               "CTLR" : "1.0.421",
+               "DBCLS" : "1.0.6557"
+            },
+            "db_update_timestamp" : "",
+            "program" : "MBAM-C",
+            "version" : "3.5.1.2522"
+         },
+         "event" : {
+            "context_tag" : "CloudController",
+            "file_name" : "..\\PoliciesControllerCOM\\PoliciesControllerEventsSink.cpp",
+            "function_name" : "mb::policiescontroller::PoliciesControllerEventsSink::ConfigOptionChanged",
+            "line_number" : 351,
+            "log_level" : "ERROR",
+            "message" : "Invalid policy config option 20",
+            "process_id" : 452,
+            "thread_id" : 8408,
+            "time_stamp" : "2018-08-29T13:35:21.677000-07:00"
+         },
+         "header" : {
+            "installation_token" : "hyQxPK8s2LgVTyyEb8P91535573438",
+            "machine_id" : "d07f97bc7545a6367159c7dbe86b68668bbd7756",
+            "time" : "2018-08-29T13:35:21-07:00"
+         }
+      },
+      {
+         "client" : {
+            "build" : "consumer",
+            "caller" : {
+               "name" : "MBAM",
+               "trigger" : "logmsg"
+            },
+            "components" : {
+               "CTLR" : "1.0.421",
+               "DBCLS" : "1.0.6557"
+            },
+            "db_update_timestamp" : "",
+            "program" : "MBAM-C",
+            "version" : "3.5.1.2522"
+         },
+         "event" : {
+            "context_tag" : "CleanController",
+            "file_name" : "..\\PoliciesControllerCOM\\PoliciesControllerEventsSink.cpp",
+            "function_name" : "mb::policiescontroller::PoliciesControllerEventsSink::ConfigOptionChanged",
+            "line_number" : 351,
+            "log_level" : "ERROR",
+            "message" : "Invalid policy config option 20",
+            "process_id" : 452,
+            "thread_id" : 8408,
+            "time_stamp" : "2018-08-29T13:35:21.677000-07:00"
+         },
+         "header" : {
+            "installation_token" : "hyQxPK8s2LgVTyyEb8P91535573438",
+            "machine_id" : "d07f97bc7545a6367159c7dbe86b68668bbd7756",
+            "time" : "2018-08-29T13:35:21-07:00"
+         }
+      },
+      {
+         "client" : {
+            "build" : "consumer",
+            "caller" : {
+               "name" : "MBAM",
+               "trigger" : "logmsg"
+            },
+            "components" : {
+               "CTLR" : "1.0.421",
+               "DBCLS" : "1.0.6557"
+            },
+            "db_update_timestamp" : "",
+            "program" : "MBAM-C",
+            "version" : "3.5.1.2522"
+         },
+         "event" : {
+            "context_tag" : "MWACControllerCOM",
+            "file_name" : "..\\PoliciesControllerCOM\\PoliciesControllerEventsSink.cpp",
+            "function_name" : "mb::policiescontroller::PoliciesControllerEventsSink::ConfigOptionChanged",
+            "line_number" : 351,
+            "log_level" : "ERROR",
+            "message" : "Invalid policy config option 20",
+            "process_id" : 452,
+            "thread_id" : 8408,
+            "time_stamp" : "2018-08-29T13:35:21.677000-07:00"
+         },
+         "header" : {
+            "installation_token" : "hyQxPK8s2LgVTyyEb8P91535573438",
+            "machine_id" : "d07f97bc7545a6367159c7dbe86b68668bbd7756",
+            "time" : "2018-08-29T13:35:21-07:00"
+         }
+      }
+   ],
+   "exploit_data" : [
+
+   ],
+   "malware_data" : [
+
+   ],
+   "mwac_data" : [
+
+   ],
+   "quarantine_actions_data" : [
+
+   ],
+   "quarantine_refresh_data" : [
+
+   ],
+   "user_actions" : [
+      {
+         "client" : {
+            "build" : "consumer",
+            "caller" : {
+               "name" : "user",
+               "trigger" : "action"
+            },
+            "components" : {
+               "CTLR" : "1.0.421",
+               "DBCLS" : "1.0.6557"
+            },
+            "db_update_timestamp" : "",
+            "program" : "MBAM-C",
+            "version" : "3.5.1.2522"
+         },
+         "header" : {
+            "installation_token" : "hyQxPK8s2LgVTyyEb8P91535573438",
+            "machine_id" : "d07f97bc7545a6367159c7dbe86b68668bbd7756",
+            "time" : "2018-08-29T13:34:56-07:00"
+         },
+         "nebula" : {
+            "nebula_account_id" : "",
+            "nebula_ea_plugin_version" : "",
+            "nebula_ea_version" : "",
+            "nebula_group_id" : "",
+            "nebula_job_id" : "",
+            "nebula_machine_id" : "",
+            "nebula_machine_name" : "",
+            "nebula_origin" : "",
+            "nebula_policy_etag" : "",
+            "nebula_policy_id" : "",
+            "nebula_schedule_etag" : "",
+            "nebula_schedule_id" : ""
+         },
+         "ui_events" : [
+            {
+               "action" : "closed",
+               "event_type" : "",
+               "iris_cohort_id" : "",
+               "iris_message_id" : "",
+               "obj_id" : "",
+               "obj_name" : "SliderWelcomeScreenTrial",
+               "obj_type" : "splash",
+               "time_stamp" : "2018-08-29T13:34:56.000-07:00"
+            },
+            {
+               "action" : "clicked",
+               "event_type" : "",
+               "iris_cohort_id" : "",
+               "iris_message_id" : "",
+               "obj_id" : "",
+               "obj_name" : "SliderWelcomeScreenTrial.buttonClose",
+               "obj_type" : "button",
+               "time_stamp" : "2018-08-29T13:34:56.002-07:00"
+            },
+            {
+               "action" : "unchecked",
+               "event_type" : "",
+               "iris_cohort_id" : "",
+               "iris_message_id" : "",
+               "obj_id" : "",
+               "obj_name" : "DashboardRightPanel.switchWebProtection",
+               "obj_type" : "switch",
+               "time_stamp" : "2018-08-29T13:35:01.289-07:00"
+            },
+            {
+               "action" : "unchecked",
+               "event_type" : "",
+               "iris_cohort_id" : "",
+               "iris_message_id" : "",
+               "obj_id" : "",
+               "obj_name" : "DashboardRightPanel.switchExploitProtection",
+               "obj_type" : "switch",
+               "time_stamp" : "2018-08-29T13:35:02.334-07:00"
+            },
+            {
+               "action" : "unchecked",
+               "event_type" : "",
+               "iris_cohort_id" : "",
+               "iris_message_id" : "",
+               "obj_id" : "",
+               "obj_name" : "DashboardRightPanel.switchMalwareProtection",
+               "obj_type" : "switch",
+               "time_stamp" : "2018-08-29T13:35:04.151-07:00"
+            },
+            {
+               "action" : "unchecked",
+               "event_type" : "",
+               "iris_cohort_id" : "",
+               "iris_message_id" : "",
+               "obj_id" : "",
+               "obj_name" : "DashboardRightPanel.switchRansomwareProtection",
+               "obj_type" : "switch",
+               "time_stamp" : "2018-08-29T13:35:04.979-07:00"
+            },
+            {
+               "action" : "unchecked",
+               "event_type" : "",
+               "iris_cohort_id" : "",
+               "iris_message_id" : "",
+               "obj_id" : "",
+               "obj_name" : "SettingsPageApplication.switchNotifyUpdates",
+               "obj_type" : "switch",
+               "time_stamp" : "2018-08-29T13:35:16.295-07:00"
+            },
+            {
+               "action" : "unchecked",
+               "event_type" : "",
+               "iris_cohort_id" : "",
+               "iris_message_id" : "",
+               "obj_id" : "",
+               "obj_name" : "SettingsPageApplication.switchShowTrayNotifications",
+               "obj_type" : "switch",
+               "time_stamp" : "2018-08-29T13:35:18.732-07:00"
+            },
+            {
+               "action" : "unchecked",
+               "event_type" : "",
+               "iris_cohort_id" : "",
+               "iris_message_id" : "",
+               "obj_id" : "",
+               "obj_name" : "SettingsPageApplication.switchWarnProtectionOff",
+               "obj_type" : "switch",
+               "time_stamp" : "2018-08-29T13:35:21.678-07:00"
+            },
+            {
+               "action" : "unchecked",
+               "event_type" : "",
+               "iris_cohort_id" : "",
+               "iris_message_id" : "",
+               "obj_id" : "",
+               "obj_name" : "SettingsPageApplication.switchShowInContextMenu",
+               "obj_type" : "switch",
+               "time_stamp" : "2018-08-29T13:35:25.253-07:00"
+            },
+            {
+               "action" : "checked",
+               "event_type" : "",
+               "iris_cohort_id" : "",
+               "iris_message_id" : "",
+               "obj_id" : "",
+               "obj_name" : "SettingsPageApplication.switchShowInContextMenu",
+               "obj_type" : "switch",
+               "time_stamp" : "2018-08-29T13:35:27.326-07:00"
+            },
+            {
+               "action" : "unchecked",
+               "event_type" : "",
+               "iris_cohort_id" : "",
+               "iris_message_id" : "",
+               "obj_id" : "",
+               "obj_name" : "SettingsPageApplication.switchTelemetry",
+               "obj_type" : "switch",
+               "time_stamp" : "2018-08-29T13:35:43.375-07:00"
+            }
+         ]
+      }
+   ]
+}

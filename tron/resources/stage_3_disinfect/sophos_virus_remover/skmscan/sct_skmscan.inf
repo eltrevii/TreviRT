@@ -1,0 +1,85 @@
+;;;
+;;; Sophos Kernel Memory Scan Driver
+;;;
+;;;
+;;; Copyright (c) 2010-2012, Sophos Limited
+;;;
+[Version]
+Signature       ="$Windows NT$"
+Class           = "AntiVirus"
+ClassGuid       = {b1d1a169-c54f-4379-81db-bee7d88d7454}
+Provider        = %Sophos%
+DriverVer       = 10/12/2012,1.0.1.0
+CatalogFile     = skm.cat
+DriverPackageType = KernelService
+
+
+[DestinationDirs]
+DefaultDestDir          = 12
+skmscan.DriverFiles     = 12
+
+
+;;
+;; Default install sections
+;;
+
+[DefaultInstall]
+OptionDesc                 = %ScannerServiceName%
+CopyFiles                  = skmscan.DriverFiles
+
+[DefaultInstall.Services]
+AddService                 = %ScannerServiceName%,,skmscan.Service,
+
+
+;;
+;; Default uninstall sections
+;;
+
+[DefaultUninstall]
+DelFiles   = skmscan.DriverFiles
+
+[DefaultUninstall.Services]
+DelService = %ScannerServiceName%,0x204             ; Flags to stop service first & delete system log entries
+
+
+;;
+;; Sources
+;;
+
+[SourceDisksNames]
+1 = %SourceDisk%
+
+[SourceDisksFiles]
+sct_skmscan.sys = 1
+
+
+;;
+;; Services Section
+;;
+
+[skmscan.Service]
+DisplayName          = %ScannerServiceName%
+Description          = %ScannerServiceDesc%
+ServiceBinary        = %12%\sct_skmscan.sys
+ServiceType          = 1                            ;SERVICE_KERNEL_DRIVER
+StartType            = 1                            ;SERVICE_SYSTEM_START
+ErrorControl         = 1                            ;SERVICE_ERROR_NORMAL
+
+
+;;
+;; Copy Files
+;;
+
+[skmscan.DriverFiles]
+sct_skmscan.sys
+
+
+;;
+;; String Section
+;;
+
+[Strings]
+Sophos                      = "Sophos Limited"
+SourceDisk                  = "Sophos Source Medium"
+ScannerServiceDesc          = "Sophos Kernel Memory Scan driver"
+ScannerServiceName          = "SCT_SKMScan"

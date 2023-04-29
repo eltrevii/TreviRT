@@ -1,0 +1,215 @@
+:: Purpose:       List of specific programs to target by name and wildcard. Called by Tron in Stage 2: De-bloat
+::                Add program names to this list to target them for removal
+::                To use a wildcard in a name use double ampersand characters (e.g. ASUS%%)
+:: Requirements:  Administrator access
+:: Author:        vocatus on reddit.com/r/TronScript ( vocatus.gate at gmail ) // PGP key: 0x07d1490f82a211a2
+:: Version:       1.1.1 + Add additional user-submitted entries
+::                1.0.0 * Convert list to new format to support looping directly from the Stage 2 script. This allows us to override the uninstall block caused by entries in PendingFileRenameOperations
+
+
+:: PREP
+set PROGRAMS_TO_TARGET_BY_NAME_SCRIPT_VERSION=1.1.1
+set PROGRAMS_TO_TARGET_BY_NAME_SCRIPT_DATE=2022-10-27
+
+
+
+:: TARGET LIST
+180%%Solution%%
+24x7%%Help
+3vix%%
+%%555%%
+Acer%%
+%%AdBlocknWatch%%
+Adobe%%Shockwave%%
+Advanced%%FX Engine
+Advanced Registry%%
+Akamai%%
+Altnet
+Amazon Browser%%
+Any Video Converter%%
+AppsHat
+%%AppToU%%
+ArcadeParlor
+Ask%%Toolbar
+AtuZi
+AVG%%TuneUp%%
+Baidu PC Faster%%
+Big Fish%%
+Bing%%
+BlueStack%%
+Bonzi Buddy%%
+Browser%%Optimize%%
+BrowserSafeguard%%
+Buzzdock%%
+%%CCC%%Help%%
+CCleaner Browser
+ClickForSale
+%%ClipGenie%%
+CloudScout%%
+%%CoolWWW%%
+%%Coupon%%
+CWA Reminder by We-Care.com%%
+%%Cydoor%%
+DealPly%%
+DealScout for Internet Explorer
+Dell%%
+Discovery Tools
+Download Updater%%
+DriverUpdate%%
+eBay%%
+eMachines%%
+%%Esuack%%
+Face Theme
+%%FashionLife%%
+FilesFrog Update Checker
+Files Opened
+File Type Assistant%%
+flash-Enhancer%%
+Free Download Manager%%
+%%Freenpro25%%
+Free Studio%%
+Free YouTube%%
+%%Gamevance%%
+GetSavin
+HD-Total-%%
+HP%%Assistant%%
+HP%%Connection%%
+HP%%Documentation%%
+HP%%Guide%%
+HP%%Help%%
+HP%%Notifications%%
+HP%%Registration%%
+hpStatusAlerts%%
+HP%%Study%%
+HP%%Support%%
+HP%%Update%%
+%%iBryte%%
+IB%%Updater%%
+Iminent
+InfoAtoms
+InstaCodecs
+Intel%%Management%%
+Intel%%ME%%UninstallLegacy
+Intel%%Smart%%
+IObit%%
+%%iStart123%%
+IWon%%
+Launch Manager%%
+Lenovo%%
+LinkSwift%%
+Live! Cam Avatar%%
+Live Updater
+lucky leap%%
+%%MapsGalaxy%%
+MapsGalaxy%%
+McAfee Security Scan
+Media Buzz
+Media Gallery%%
+Media View%%
+Media Watch%%
+Mindspark%%
+MobileWiFi%%
+Mobogenie
+Move Media%%
+MPlayerplus%%
+My HP%%
+MyPC Backup%%
+My Web Searc%%
+Nero%%
+Norton Internet%%
+OMG Music Plus%%
+OOBE%%
+Optimizer%%
+Orbit Downloader
+Pdf995%%
+Plus-HD-1.3
+PMB%%
+Price Check by AOL
+PrivDog
+Productivity%%Toolbar for IE
+QuickShare
+%%QuickTime%%
+Qwiklinx
+RadioRage%%
+Raptr
+RealDownloader%%
+RealNetworks%%
+RealUpgrade%%
+RegClean Pro
+RegInOut%%
+Remote Keyboard
+Remote Play with Playstation%%
+Rich Media View
+Rock Turner
+Roxio%%
+%%SaferSurf%%
+%%SaveForYou%%
+SaveOn%%
+%%Savings%%
+ScorpionSave%%
+%%Search%%
+SelectionLinks
+%%Shop_and_Up%%
+ShopAtHome%%
+%%Shopper%%
+Shopper%%
+Shopping%%
+Shop To Win
+SimilarDeals%%
+SLOW-PCfighter
+SmartWebPrinting%%
+Smiley Central%%
+SocialSafe
+Software Assist
+Software Updater
+Soluto
+Sonic CinePlayer%%
+Sony Music%%
+Speedial%%
+%%SpeedUpMyPC%%
+SpeedUpMyPc%%
+Super Optimizer%%
+SweetIM for Messenger%%
+SweetPacks%%
+SySaver
+The Gator
+%%TidyNetwork%%
+TidyNetwork.com
+%%Toolbar%%
+Toolbar%%
+TopArcadeHits
+Toshiba%%
+%%Trial%%
+Search App by Ask%%
+Uninstall Helper
+UserGuide%%
+VAIO%%
+VGClient%%
+Video Converter%%
+VideoDownloadConverter%%
+VideoFileDownload
+Video Player
+%%Virtumundo%%
+%%VirusProtectPro%%
+VisualBee%%
+Wajam
+%%WeatherBug%%
+WebBar%%
+WebConnect%%
+Webshots%%
+WhenU%%
+%%WhenUsave%%
+WildGames%%
+WildTangent%%
+Windows Internet Guard%%
+WiseConvert%%
+Yahoo%%Browser%%
+Yahoo%%Software%%
+Yahoo%%Toolbar
+Yammer%%
+yessearches%%
+Yontoo%%
+YouTube Downloader%%
+%%Zango%%
+ZD Manager
+Zip Opener Packages

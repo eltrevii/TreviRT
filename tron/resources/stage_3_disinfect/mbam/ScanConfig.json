@@ -1,0 +1,95 @@
+F9B094B09A3D9A59C2576F7D08802ACC06E75455A92417ADB63EBCCADF88A454
+{
+   "defaultScheduledScanSet" : true,
+   "estimatedFileSystemObjects" : 0,
+   "estimatedRegistryObjects" : 0,
+   "estimatedRootkitScanObjects" : 0,
+   "globalScanParams" : {
+      "autoClean" : false,
+      "autoRestart" : false,
+      "checkForUpdates" : true,
+      "enableShuriken" : true,
+      "externalDetections" : [
+
+      ],
+      "filesToScan" : [
+
+      ],
+      "pumHandling" : "detect",
+      "pupHandling" : "detect",
+      "scanArchives" : true,
+      "scanExtra" : true,
+      "scanFileSystem" : false,
+      "scanMemory" : false,
+      "scanRegistry" : false,
+      "scanRootkit" : true,
+      "scanStartup" : false,
+      "type" : "custom"
+   },
+   "lastProductVersion" : "0",
+   "lastScanTime" : "0",
+   "scanExclusions" : [
+
+   ],
+   "scanPriority" : "high",
+   "scheduledScans" : [
+      {
+         "checkLicenseState" : false,
+         "id" : "3c7556b4-abcb-11e8-800f-d050998a16aa",
+         "scheduleParams" : {
+            "frequency" : "months",
+            "lastTriggeredTime" : {
+               "day" : 1,
+               "hour" : 0,
+               "minute" : 0,
+               "month" : 1,
+               "second" : 0,
+               "year" : 2000
+            },
+            "originalScheduleTime" : {
+               "day" : 29,
+               "hour" : 4,
+               "minute" : 41,
+               "month" : 9,
+               "second" : 38,
+               "year" : 2018
+            },
+            "recoveryPeriod" : 23,
+            "recurrence" : 1
+         },
+         "scheduledScanParams" : {
+            "autoClean" : false,
+            "autoRestart" : false,
+            "checkForUpdates" : true,
+            "clientMetadata" : {
+               "jobId" : "",
+               "scheduleId" : "",
+               "scheduleTag" : ""
+            },
+            "enableShuriken" : true,
+            "externalDetections" : [
+
+            ],
+            "filesToScan" : [
+
+            ],
+            "pumHandling" : "detect",
+            "pupHandling" : "detect",
+            "scanArchives" : true,
+            "scanExtra" : true,
+            "scanFileSystem" : true,
+            "scanMemory" : true,
+            "scanRegistry" : true,
+            "scanRootkit" : false,
+            "scanStartup" : true,
+            "type" : "normal"
+         }
+      }
+   ],
+   "swissArmyEarlyBootStartSet" : false,
+   "totalNumberOfScans" : 0,
+   "totalPUMsDetected" : "0",
+   "totalPUPsDetected" : "0",
+   "totalScannedItems" : "0",
+   "totalThreatsDetected" : "0"
+}

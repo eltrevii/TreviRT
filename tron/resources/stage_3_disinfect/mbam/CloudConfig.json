@@ -1,0 +1,20 @@
+D0F7C292D2EA353B23B78661E47DE151A39E78F25D81A94700A2A5D7B31B6B66
+{
+   "ae_datafiles" : [
+
+   ],
+   "allow_data_collection" : false,
+   "arw_detections" : [
+
+   ],
+   "mbae_detections" : [
+
+   ],
+   "rootkit_detections" : [
+
+   ],
+   "shuriken_detections" : [
+
+   ],
+   "use_staging" : false
+}

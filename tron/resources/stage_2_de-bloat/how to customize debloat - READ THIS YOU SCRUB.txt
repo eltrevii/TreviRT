@@ -1,0 +1,67 @@
+
+
+There are five files in these sub-directories that determine what Tron targets for bloatware removal:
+
+1. \oem\programs_to_target_by_name.txt
+2. \oem\programs_to_target_by_GUID.txt
+3. \oem\toolbars_BHOs_to_target_by_GUID.txt
+4. \metro\metro_3rd_party_modern_apps_to_target_by_name.ps1
+5. \metro\metro_Microsoft_modern_apps_to_target_by_name.ps1
+
+You can customize any of these files to tweak what Tron targets for removal.
+
+
+#  \oem\programs_to_target_by_name.txt
+
+ Insert program NAMES, one per line, into the file. Tron will try to uninstall any program
+ whose name matches one of the names in this file. Don't put any special characters around
+ the name (quotes, commas, etc). Spaces are fine. Tron uses WMI queries inside a batch file,
+ so the wildcard character is double-percent (%%).
+
+Example list:
+    Cyberlink%%
+    Dell Getting Started Guide%%
+    Dell Video%%
+    %%Toolbar%%
+
+So in this example,  Dell%%  would catch and attempt to remove both "Dell Getting Started Guide" AND "Dell Video."
+
+
+
+#  \oem\programs_to_target_by_GUID.txt
+
+ List specific GUIDs to target, one per line. This file is commented like batch but technically plain text.
+
+
+
+#  \oem\toolbars_BHOs_to_target_by_GUID.txt
+
+ List specific GUIDs to target, one per line. This file is commented like batch but technically plain text.
+ It's separate from programs_to_target_by_GUID.txt just for organization; Tron executes both files
+ the same way.
+
+
+
+#  \metro\metro_3rd_party_modern_apps_to_target_by_name.ps1
+
+ This is a Powershell script listing pre-loaded 3rd-party "Modern" apps. Add any 3rd-party "Modern"
+ apps you want to remove to this list. This file may also be executed directly from an administrator-privileged
+ PowerShell session.
+
+
+
+#  \metro\metro_Microsoft_modern_apps_to_target_by_name.ps1
+
+ This is a Powershell script listing pre-loaded Microsoft "Modern" apps. Customize this list to tweak
+ which official Microsoft "modern" apps get removed. This file may also be executed directly from an administrator-privileged
+ PowerShell session.
+
+
+
+ !! NOTE !!
+
+Many programs do not register with WMI and so can't be targeted with the by_GUID scripts.
+For those programs, you'll just have to remove them manually. This stage is just a "best-effort"
+attempt to automate some of the tedium.
+
+Godspeed

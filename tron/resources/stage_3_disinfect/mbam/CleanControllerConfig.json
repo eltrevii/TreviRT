@@ -1,0 +1,14 @@
+56DE9CDBD522971C7DEE34195BBFE800B9F648588881C5BFBD34BD46603A5DE9
+{
+   "arw_hubble_timeout_ms" : 5000,
+   "auto_reboot_on_pending_action_dor" : false,
+   "auto_start_override_set" : false,
+   "disable_meps" : false,
+   "disable_rules_wl" : false,
+   "disable_signature_wl" : false,
+   "disable_system_protected_wl" : false,
+   "rtp_hubble_timeout_ms" : 4000,
+   "scan_hubble_timeout_ms" : 6000,
+   "schemaVersion" : 3,
+   "use_staging" : false
+}

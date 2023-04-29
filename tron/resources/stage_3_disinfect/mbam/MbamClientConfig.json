@@ -1,0 +1,12 @@
+D200BACD67F193AE84BE77A83041C1358BA3B099138F9A36747A18BFE90F2CAF
+{
+    "Dashboard": {
+        "AlternatingMessageCounter": 1
+    },
+    "Tray": {
+        "ScanNotifications": {
+            "FreeScheduleScanCounts": [
+            ]
+        }
+    }
+}

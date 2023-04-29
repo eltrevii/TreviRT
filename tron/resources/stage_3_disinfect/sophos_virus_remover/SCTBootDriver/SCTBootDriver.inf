@@ -1,0 +1,79 @@
+;;;
+;;; Sophos Boot-time Cleanup Driver for Windows 2000/XP/2003/Vista/2008.
+;;;
+;;;
+;;; Copyright (c) 2008, Sophos Plc.  All rights reserved.
+;;;
+
+[Version]
+signature           =   "$Windows NT$"
+Class               =   "AntiVirus"
+ClassGuid           =   {b1d1a169-c54f-4379-81db-bee7d88d7454}
+Provider            =   %Sophos%
+DriverVer           =   05/22/2008,1.0.0.101
+CatalogFile         =   SCTBootDriver.cat
+
+[DestinationDirs]
+DefaultDestDir          = 12
+SophosBoot.DriverFiles  = 12                ;%systemroot%\system32\drivers
+
+;;
+;; Default install sections
+;;
+
+[DefaultInstall]
+OptionDesc          = %DriverDesc%
+CopyFiles           = SophosBoot.DriverFiles
+
+[SourceDisksNames]
+1 = %Disk1%
+
+[SourceDisksFiles]
+SCTBootDriver.sys    = 1
+
+[DefaultInstall.Services]
+; 0x10 => don't clobber start type if already installed.
+AddService          = %DriverName%,0x10,SCTBootDriver.ServiceInstall
+
+;;
+;; Default uninstall sections
+;;
+
+[DefaultUninstall]
+DelFiles            = SophosBoot.DriverFiles
+
+[DefaultUninstall.Services]
+DelService = %DriverName%
+
+;;
+;; Services Section
+;;
+
+[SCTBootDriver.ServiceInstall]
+DisplayName         = %DriverName%
+Description         = %DriverDesc%
+ServiceBinary       = %12%\SCTBootDriver.sys
+ServiceType         = 1            ;SERVICE_KERNEL_DRIVER
+StartType           = 3            ;SERVICE_DEMAND_START
+ErrorControl        = 0            ;SERVICE_ERROR_IGNORE
+LoadOrderGroup      = "FSFilter Replication"
+;
+; Needed for Vista ??
+; Security          = "D:P(A;;GA;;;SY)(A;;GA;;;BA)(A;;GR;;;IU)(A;;GR;;;SU)" ; Local System, Administrators: Full; Interactive and Service users: Gen.Read
+
+;;
+;; Copy Files
+;;
+
+[SophosBoot.DriverFiles]
+SCTBootDriver.sys
+
+;;
+;; String Section
+;;
+
+[Strings]
+Sophos                      = "Sophos Group"
+DriverName                  = "SCTBootDriver"
+DriverDesc                  = "Sophos Cleanup Tool Boot Driver"
+Disk1                       = "Sophos Source Media"

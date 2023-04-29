@@ -1,0 +1,432 @@
+NAME:        Tron, an automated cleaner/scanner/disinfection tool
+AUTHOR:      vocatus on old.reddit.com/r/TronScript ( vocatus.gate @ gmail ) // PGP: 0x07d1490f82a211a2
+BACKGROUND:  Why the name? Tron "Fights for the User"
+CONTACT:     vocatus.gate@gmail.com, however, please post to https://old.reddit.com/r/TronScript if you have issues BEFORE contacting me directly. This way the entire community can get eyes on the problem and help out vs. just me.
+
+
+I got tired of running these utilities manually and decided to just script everything. So Tron is basically a collection of batch files to automate cleanup and disinfection tasks on Windows machines.
+
+
+CONTENTS:
+1. Usage Summary
+2. Command-Line Use
+3. Script Interruption
+4. Notes on Safe Mode
+5. Sending a Post-Run Email Report
+6. Changing Defaults
+7. Executing Custom/3rd-party Scripts
+8. Executing bundled WSUS Offline updates
+9. Pack Integrity
+10. License
+11. Contact Info
+12. Script exit codes
+13. Full description of ALL actions taken
+
+
+USE:
+0. FIRST THINGS FIRST: REBOOT THE COMPUTER BEFORE RUNNING TRON. This is to allow any pending updates to finish. If you don't do this and the computer reboots during Tron with pending updates, it can brick the system. To re-iterate: It is very important to reboot the computer before running Tron.
+
+1. Copy tron.bat and the \resources folder to the DESKTOP of the target machine
+
+2. Tron can be run with Windows in either Safe Mode or Regular mode. Regular mode is generally recommended for a first go around.
+
+3. Right-click on tron.bat and select "Run as Administrator"
+
+3. Wait anywhere from 3-10 hours (yes, it really takes that long)
+
+     (Side note: You'll need to manually click "scan" in the Malwarebytes window that appears part of the way through Stage 3: Disinfect.
+	  The script will continue in the background though, so it won't stall if you're not around to click immediately)
+
+5. Reboot. When Tron finishes, REBOOT THE SYSTEM!! before doing anything else
+
+
+
+By default the master log file is at C:\logs\tron\tron.log. If you want to change this, read the section on changing defaults below.
+
+Tron will briefly check for a newer version when it starts up and notify you if one is found. It will also automatically grab the latest S2 de-bloat lists from Github. You can prevent this update check with the -sdu switch if desired.
+
+Depending how badly the system is infected, it could take anywhere from 3 to 10 hours to run. I've personally observed times between 4-8 hours, and one user reported a run time of 30 hours. Basically set it and forget it.
+
+NOTE 1: PLEASE REPORT PROBLEMS AND SUCCESSES TO THE SUBREDDIT! Feedback is very helpful. Additionally, if you run Tron with the -udl switch it will automatically email me the run logs at the end of the script. Not required but greatly appreciated if you can.
+
+NOTE 2: Each sub-stage script (e.g. stage_2_de-bloat.bat) can be run individually apart from Tron. Just remember to run the scripts as Administrator if you go this route.
+
+
+COMMAND-LINE USE:
+Command-line use is fully supported. All switches are optional and can be used simultaneously.*
+
+tron.bat [ [-a|-asm] -c -d -dev -e -er -m -o -p -pmb -r -sa -sap -scc -scs -sd -sdb
+          -sdc -sdu -se -sk -sl -sm -sor -spr -ss -str -swu -swo -udl -v -x] ] | [-h]
+
+ -a   Automatic mode (no prompts; implies -e)
+ -asm Automatic mode (no prompts; implies -e; reboots to Safe Mode first)
+ -c   Config dump (show config. Can be used with other switches to see what
+      WOULD happen, but script will never execute if this switch is used)
+ -d   Dry run (run through script without executing any jobs)
+ -dev Override OS detection (allow running on unsupported Windows versions)
+ -e   Accept EULA (suppress disclaimer warning screen)
+ -er  Email a report when finished. Requires you to configure SwithMailSettings.xml
+ -m   Preserve OEM Metro apps (don't remove them)
+ -np  Skip the pause at the end of script
+ -o   Power off after running (overrides -r)
+ -p   Preserve power settings (don't reset to Windows default)
+ -pmb Preserve Malwarebytes (don't uninstall it) after Tron is complete
+ -r   Reboot (auto-reboot 15 seconds after completion)
+ -sa  Skip ALL antivirus scans (KVRT, MBAM, SAV)
+ -sap Skip application patches (don't patch 7-Zip)
+ -scc Skip cookie cleanup (not recommended, Tron auto-preserves most common login cookies)
+ -scs Skip custom scripts (has no effect if you haven't supplied custom scripts)
+ -sd  Skip defrag (force Tron to ALWAYS skip Stage 5 defrag)
+ -sdb Skip de-bloat (entire OEM bloatware removal process; implies -m)
+ -sdc Skip DISM Cleanup (SxS component store deflation)
+ -sdu Skip debloat update. Prevent Tron from auto-updating the S2 debloat lists
+ -se  Skip Event Log clear (don't backup and clear Windows Event Logs)
+ -sk  Skip Kaspersky Virus Rescue Tool (KVRT) scan
+ -sm  Skip Malwarebytes Anti-Malware (MBAM) installation
+ -sor Skip OneDrive removal regardless whether it's in use or not
+ -spr Skip page file settings reset (don't set to "Let Windows manage the page file")
+ -ss  Skip Sophos Anti-Virus (SAV) scan
+ -str Skip Telemetry Removal (just turn off Telemetry instead of removing it)
+ -swu Skip Windows Updates entirely (ignore both WSUS Offline and online methods)
+ -swo Skip user-supplied WSUS Offline updates (if they exist; online updates still attempted)
+ -udl Upload debug logs. Send tron.log and the system GUID dump to the Tron developer
+ -v   Verbose. Show as much output as possible. NOTE: Significantly slower!
+ -x   Self-destruct. Tron deletes itself after running and leaves logs intact
+
+ Misc switches (must be used alone):
+ -h   Display this help text
+
+ * There is probably no -UPM switch
+
+
+
+SCRIPT INTERRUPTION:
+If the script is interrupted e.g. from a crash or a forced reboot (often encountered during stage_2_de-bloat), simply re-launch tron.bat as Administrator and it will resume from the last stage successfully started. All command-line switches and options should be preserved as well.
+
+More details about this function can be found in the list of all actions Tron performs at the bottom of this document.
+
+
+
+SAFE MODE:
+In older versions of Tron (v10.3.1 and back), Safe Mode was recommended vs. Normal/Regular mode (Windows boot mode). The current recommendation has changed starting in v10.4.0, and I recommend first running in Normal/Regular mode, and only attempting a run in Safe Mode if that fails.
+
+
+
+EMAIL REPORT:
+To have Tron send an email report at completion, edit this file:
+
+    \tron\resources\stage_7_wrap-up\email_report\SwithMailSettings.xml
+
+Specify your SMTP server, username, and password. After specifying your settings you can use the -er switch to have Tron send the email report. The summary logs (tron_removed_files.txt and tron_removed_programs.txt) will be attached as well.
+
+Keep in mind the username and password for the email account will be stored in PLAIN TEXT so don't leave it lying around on a system you don't trust.
+
+
+
+CHANGE DEFAULTS (advanced):
+If you don't want to use the command-line and don't like Tron's defaults, you can change the following default variables. Keep in mind command-line switches will always override their respective default option when used.
+
+These settings are stored in \tron\resources\functions\tron_settings.bat
+
+  - To change the master directory where all of Tron's output goes, edit this line:
+       set LOGPATH=%SystemDrive%\Logs\tron
+
+  - To change the name of Tron's master log file, edit this line:
+       set LOGFILE=tron.log
+
+  - To change where Tron stores quarantined files, change this path (note: this is currently unused by Tron, setting it has no effect):
+       set QUARANTINE=%LOGPATH%\quarantine
+
+  - To change the location of the backups Tron makes (Registry, Event Logs, power scheme, etc), edit this line:
+       set BACKUPS=%LOGPATH%\backups
+
+  - To change where Tron saves raw unprocessed logs from the various sub-tools, edit this line:
+       set RAW_LOGS=%LOGPATH%\raw_logs
+
+  - To change where Tron saves summary logs, edit this line:
+       set SUMMARY_LOGS=%LOGPATH%\summary_logs
+
+  - To always run automatically (no welcome screen, implies acceptance of EULA), change this to yes:
+       set AUTORUN=no
+
+  - To always run automatically (no welcome screen, implies acceptance of EULA, reboots to Safe Mode first), change this to yes:
+       set AUTORUN_IN_SAFE_MODE=no
+
+  - To do a dry run (don't actually execute jobs), change this to yes:
+       set DRY_RUN=no
+
+  - To permanently accept the End User License Agreement (suppress display of disclaimer warning screen), change this to yes:
+       set EULA_ACCEPTED=no
+
+  - To have Tron send an email report when finished, change this to yes (requires you to configure SwithMailSettings.xml with your SMTP info):
+       set EMAIL_REPORT=no
+
+  - To preserve default Metro apps (don't remove them), change this to yes:
+       set PRESERVE_METRO_APPS=no
+
+  - To prevent Tron from pausing at the end of the script (waiting for a keypress), change this to yes:
+       set NO_PAUSE=no
+
+  - To shut down the computer when Tron is finished, change this to yes:
+       set AUTO_SHUTDOWN=no
+
+  - To preserve the power scheme (instead of resetting to Windows defaults), change this to yes:
+       set PRESERVE_POWER_SCHEME=no
+
+  - To preserve Malwarebytes installation (skip removal) at the end of Tron, change this to yes:
+       set PRESERVE_MALWAREBYTES=no
+
+  - To configure post-run reboot, change this value (in seconds). 0 disables auto-reboot:
+       set AUTO_REBOOT_DELAY=0
+
+  - To skip all anti-virus scan engines (MBAM, KVRT, Sophos), change this to yes:
+       set SKIP_ANTIVIRUS_SCANS=no
+
+  - To skip application patches (don't patch 7-Zip) set this to yes:
+       set SKIP_APP_PATCHES=no
+
+  - To leave ALL cookies intact (not recommended, Tron auto-preserves most common login cookies such as Spotify, Gmail, etc), set this to yes:
+       set SKIP_COOKIE_CLEANUP=no
+
+  - To skip custom scripts (stage 8) regardless whether or not .bat files are present in the stage_8_custom_scripts folder, change this to yes:
+       set SKIP_CUSTOM_SCRIPTS=no
+
+  - To skip OEM debloat, change this to yes:
+       set SKIP_DEBLOAT=no
+
+  - To always skip defrag (even on mechanical drives; Tron automatically skips SSD defragmentation), change this to yes:
+       set SKIP_DEFRAG=no
+
+  - To skip DISM component (SxS store) cleanup, change this to yes:
+       set SKIP_DISM_CLEANUP=no
+
+  - To prevent Tron from connecting to Github and automatically updating the Stage 2 debloat lists, set this to yes:
+       set SKIP_DEBLOAT_UPDATE=no
+
+  - To skip Event Log backup and clear, change this to yes:
+       set SKIP_EVENT_LOG_CLEAR=no
+
+  - To skip scanning with Kaspersky Virus Rescue Tool (KVRT), change this to yes:
+       set SKIP_KASPERSKY_SCAN=no
+
+  - To skip installation of Malwarebytes Anti-Malware (MBAM), change this to yes:
+       set SKIP_MBAM_INSTALL=no
+
+  - To skip removal of OneDrive regardless whether it's in use or not, change this to yes:
+       set SKIP_ONEDRIVE_REMOVAL=no
+
+  - To prevent Tron from resetting the page file to Windows defaults, change this to yes:
+       set SKIP_PAGEFILE_RESET=no
+
+  - To skip scanning with Sophos Anti-Virus (SAV), change this to yes:
+       set SKIP_SOPHOS_SCAN=no
+
+  - To skip removal of Windows telemetry (user tracking) and just turn it off instead, change this to yes:
+       set SKIP_TELEMETRY_REMOVAL=no
+
+  - To skip only bundled WSUS Offline updates (online updates still attempted), change this to yes:
+       set SKIP_WSUS_OFFLINE=no
+
+  - To skip Windows Updates entirely (ignore both WSUS Offline and online methods), change this to yes:
+       set SKIP_WINDOWS_UPDATES=no
+
+  - To automatically upload debug logs to the Tron developer (vocatus), change this to yes:
+       set UPLOAD_DEBUG_LOGS=no
+
+  - To display as much output as possible (verbose), change this to yes:
+       set VERBOSE=no
+
+  - To have Tron delete itself after running (self-destruct), change this to yes:
+       set SELF_DESTRUCT=no
+
+
+EXECUTING 3RD-PARTY/CUSTOM SCRIPTS:
+Tron supports executing custom scripts just prior to the end-screen.
+
+Place any batch files you want to execute near just prior to Tron's finishing in this folder: \tron\resources\stage_8_custom_scripts
+
+Custom scripts work like so:
+ - If there are any .bat files in the \stage_8_custom_scripts folder, Tron will execute each one alphabetically sequentially by name. When they're done, it will finish cleanup and end the script as normal
+ - If there are no .bat files in the \stage_8_custom_scripts folder, Stage 8 will be silently skipped
+ - Supporting files may be placed in the folder, for example any files required by the custom scripts, but Tron will ignore anything that isn't a .bat file
+ - If you want to use supporting batch files but don't want Tron executing them directly, use the .cmd file extension instead of .bat and Tron will ignore them
+ - It is your responsibility what your scripts do. I will provide no support for custom scripts other than having Tron attempt to run them
+ - Use the -scs switch or edit the file \tron\resources\functions\tron_settings.bat and set SKIP_CUSTOM_SCRIPTS to yes to direct Tron to ignore all custom scripts even if they are present. Can be useful if you have a set of scripts you only want to execute on certain systems and don't want to carry two copies of Tron around
+
+
+EXECUTING BUNDLED WSUS OFFLINE UPDATES:
+Tron supports using bundled WSUS Offline update packages over the traditional online update method.
+
+To add offline update packages to Tron:
+
+1. Download WSUS Offline (http://download.wsusoffline.net/)
+2. Run it and have it download the updates you want
+3. Copy the "client" folder (usually in \wsusoffline\client) to \tron\resources\stage_5_patch\wsus_offline
+4. Make sure that "Update.cmd" is present in this path: \tron\resources\stage_5_patch\wsus_offline\client\Update.cmd
+5. Run Tron, it should automatically detect and use the offline updates
+
+If for some reason you want to skip the bundled update package on a certain system, use the -swo switch or set SKIP_WSUS_OFFLINE to yes in \tron\resources\functions\tron_settings.bat, and Tron will use the regular online update method for that run.
+
+
+INTEGRITY:
+In every release 'checksums.txt' is signed with my PGP key (0x07d1490f82a211a2, included). You can use it to verify package integrity.
+
+
+LICENSE:
+Tron and any included subscripts and .reg files I've written are free to use/redistribute/whatever under the MIT license. It'd be nice if you sent an email and let me know if you do something cool with it, but it's not required. All 3rd-party tools Tron calls (MBAM, TDSSK, etc) are bound by their respective licenses. It is YOUR responsibility to determine if you can use them in your specific situation.
+
+
+OTHER:
+I try to respond to messages quickly. If you have a question, suggestion or problem, post it to the subreddit so everyone can get eyes on it. As a last resort you may email me directly.
+
+Hope this is helpful to other PC techs,
+
+ - Vocatus
+
+
+If you feel overly charitable, donations are accepted at these addresses:
+
+Bitcoin:      1Biw8gx2kD7mZf66ZdNgB9tG1pE9YA3kEd
+
+Bitcoin Cash: 18sXTTrAViPZVQtm63zBK6aCK3XfJpEThk
+
+Monero:       4GG9KsJhwcW3zapDw62UaS71ZfFBjH9uwhc8FeyocPhUHHsuxj5zfvpZpZcZFHWpxoXD99MVt6PnR9QfftXDV8s6HbYdDuZEDZ947uiEje
+
+
+SCRIPT EXIT CODES:
+When Tron exits, it will pass an exit code indicating the final status (success/warning/error/failure/etc).
+
+CODE		MEANING
+0			Success
+1			Error (usually fatal)
+2			Warning (non-fatal)
+3			Unsupported OS (run with -dev to override)
+4			Exit pending reboot
+5			User is an idiot (aka you tried running from the temp directory in spite of the instructions clearly saying not to)
+
+
+#########################
+# FULL TRON DESCRIPTION #
+#########################
+The best way to see what Tron does is simply crack open tron.bat or one of the stage-specific subscripts with a text editor (preferably one with syntax highlighting) or on GitHub and just read the code. Every section has comments explaining what it does, and you don't need to be able to read code to understand it. Barring that, here's a general description of every action Tron performs.
+
+tron.bat                         Master script that launches everything else. It performs many actions on its own, but for any task not performed directly, we call an external utility or script. Each stage (e.g. Stage 1: Tempclean) has its own master script that Tron calls in sequence. Sub-stage scripts can be found in each stages subdirectory under the \resources folder. e.g. \tron\resources\stage_1_tempclean\stage_1_tempclean.bat
+
+Scripts in \resources\functions:
+  initialize_environment.bat     Builds the Tron runtime environment during initial loading. Scans the system and detects various things such as the Windows version, location of utilities, etc. Don't edit this file.
+  log.bat                        Tron's log function. Don't edit this file.
+  prerun_checks_and_tasks.bat    Various checks and tasks Tron performs during initial loading. Don't edit this file.
+  tron_settings.bat              Tron's default settings file. Use this to customize how Tron behaves when run.
+
+
+Tron-internal prep jobs:
+(These are all executed even if Tron is canceled before running)
+ . Detect TEMP execution         Detect if we're running from the TEMP directory and prevent Tron from executing if so. TEMP is one of the first places to get wiped when Tron starts so we cannot run from there
+ . Make log directories          Create the master log directory and sub-directories if they don't exist. By default this is %SystemDrive%\logs\tron.log
+ . Detect Windows & IE versions  Determines quite a few things in the script, such as which versions of various commands get executed
+ . Unsupported OS blocker        Throw an alert message if running on an unsupported OS, then exit. Use the -dev switch to override this behavior and allow running on unsupported Windows versions
+ . Disk configuration check      Check if the system drive is an SSD, Virtual Disk, or threw an unspecified error (couldn't be read by smartctl.exe) and set the SKIP_DEFRAG variable to yes_ssd, yes_vm, or yes_error respectively. If any of these conditions are triggered, Tron skips **Stage 5 defrag** automatically
+ . Detect free space             Detect and save available hard drive space to compare against later. Simply used to show how much space was reclaimed; does not affect any script functions
+ . Detect resume                 Detect whether or not we're resuming after an interrupted run (e.g. from a reboot)
+ . Enable F8 Safe Mode selection Re-enable the ability to use the F8 key on bootup (Windows 8/8.1 only; enabled by default on Server 2012/2012 R2)
+ . Check for network connection  Check for an active network connection, and skip the update checks if one isn't found
+ . Check for update              Compare the local copy of Tron to the version on the official repo (does this by reading latest version number from sha256sums.txt). If the local copy is out of date, Tron will ask to automatically download the latest copy (**always** recommended). If permitted, it will download a copy to the desktop, verify the SHA256 hash, then self-destruct (delete) the current outdated copy
+ . Update debloat lists          Connect to Github and download the latest version of the Stage 2 debloat lists at initial launch. Use the -sdu (SKIP_DEBLOAT_UPDATE) switch to prevent this behavior. I recommend letting Tron update the lists unless you have a good, specific reason not to
+ . Detect Administrator rights   Detect whether or not we're running as Administrator and alert the user if we're not
+ . SMART check                   Run a quick SMART disk health check and notify if any drives don't report "OK" for their status
+ . Create RunOnce entry          Create the following registry key to support resuming if there is an interruption: HKCU\Software\Microsoft\Windows\CurrentVersion\RunOnce /v "tron_resume" /t REG_SZ /d "%~dp0tron.bat %-resume"
+
+
+STAGE 0: Prep
+ . Create System Restore point   Create a pre-run system restore point. Vista and up only, client OS's only (not supported on Server OS's, and on Windows 10 does not work if the system is in any form of Safe Mode. This is a known bug, and I spent hours trying to find a workaround but was not able to find a solution, so if you absolutely require a system restore point, recommend running in normal mode
+ . Rkill                         rkill is an anti-malware prep tool; it looks for and kills a number of known malware that interfere with removal tools. Rkill will exclude any process listed in \resources\stage_0_prep\rkill\rkill_process_whitelist.txt from being closed
+ . Create pre-run profile        Dump list of installed programs and list of all files on the system so we can compare later and see exactly what was removed
+ . GUID dump                     Dump list of all installed program GUIDs. These dumps are useful in helping the project bolster the blacklist of known-bad GUIDs
+ . Metro app dump                Dump list of all installed Metro "modern" apps. These dumps are useful in helping the project bolster the blacklist of known-bad apps
+ . caffeine.exe                  Tron uses Caffeine to keep the system awake during the scan. At the end of the script it re-enables the screensaver and resets power settings to Windows defaults. Use the -p switch to prevent resetting the power scheme to Windows defaults
+ . ProcessKiller                 Utility provided by /u/cuddlychops06 which kills various userland processes. You can customize this list in the accompanying whitelist.txt file in the same directory as the ProcessKiller .exe. We use this to further kill anything that might interfere with Tron. Specifically, it kills everything in userland with the exception of the following processes: ClassicShellService.exe, explorer.exe, dwm.exe, cmd.exe, mbam.exe, teamviewer.exe, TeamViewer_Service.exe, Taskmgr.exe, Teamviewer_Desktop.exe, MsMpEng.exe, tv_w32.exe, VTTimer.exe, Tron.bat, rkill.exe, rkill64.exe, rkill.com, rkill64.com, conhost.exe, dashost.exe
+ . Safe Mode                     Set system to reboot into Safe Mode with Networking if a reboot occurs. Removes this and resets to normal bootup at the end of the script. Accomplished via this command: bcdedit /set {default} safeboot network
+ . Set system time via NTP       Sync the system clock to time.nist.gov, 3.pool.ntp.org and time.windows.com
+ . check and repair WMI          Check the WMI interface and attempt repair if broken. Tron uses WMI for a lot of stuff including ISO date format conversion, OEM bloatware removal, and various other things, so having it functioning is critical
+ . McAfee Stinger                anti-malware/rootkit/virus standalone scanner from McAfee. Does not support plain-text logs so we save its HTML log to %LOGPATH%\tron_raw_logs (by default). Tron executes Stinger as follows: stinger32.exe --GO --SILENT --PROGRAM --REPORTPATH="%LOGPATH%" --RPTALL --DELETE
+ . TDSS Killer                   anti-rootkit utility from Kaspersky Labs. Tron executes TDSSKiller as follows: tdsskiller.exe -l %TEMP%\tdsskiller.log -silent -tdlfs -dcexact -accepteula -accepteulaksn
+ . erunt                         used to backup the registry before beginning a Tron run
+ . VSS purge                     purges oldest set of Volume Shadow Service files (basically snapshot-in-time copies of files). Malware can often hide out here.
+ . Reduce system restore space   Restrict System Restore to only use 7% of available hard drive space
+
+
+STAGE 1: Tempclean
+ . Internet Explorer cleanup     Runs built-in Windows tool to clean and reset Internet Explorer ( rundll32.exe inetcpl.cpl,ClearMyTracksByProcess 4351 ). Runs on IE 7 and up
+ . TempFileCleanup.bat           Script I wrote to clean some areas that other tools seem to miss. Note: it specifically targets, among other things, any .txt or .bat files at the root of C:\
+ . CCLeaner                      CCLeaner utility by Piriform. Used to clean temp files before running AV scanners. Note that CCleaner wipes %AppData% Local Storage. Edit ccleaner.ini and change  (App)Local Storage*=True  to  (App)Local Storage*=False  if you don't want this behavior. Also note that Tron automatically preserves most common login cookies (Chase.com, gmail.com, etc). Use the -scc switch to leave ALL cookies intact (not recommended)
+ . Cleanup duplicate downloads:  Searches for and delete duplicate files found in the Downloads folders of each user profile (ChromeInstaller(1).exe, ChromeInstaller(2)exe, etc). Does not touch any other folders. Uses a UTF-8-friendly port of Sentex's original Find Dupe utility
+ . USB Device cleanup            Uninstalls unused or not present USB devices from the system (non-existent thumb drives, etc). Uses drivecleanup.exe from Uwe Sieber ( www.uwe-sieber.de )
+ . Clear Windows event logs      Backs up Windows event logs to the LOGPATH directory, then clears all log files
+ . Clear Windows Update cache    Purges uninstaller files for already-installed Windows Updates. Typically frees up quite a bit of space
+ . Flush BranchCache cache       Tron executes the command 'netsh branchcache flush' to flush any cached data in the BranchCache (win7 and up only)
+
+
+STAGE 2: De-bloat
+ . OEM de-bloat (by name)        Use WMI to attempt to uninstall any program listed in this file:  \resources\stage_2_de-bloat\oem\programs_to_target_by_name.txt
+ . OEM de-bloat (by GUID)        Use WMI to attempt to remove specific list of GUIDs in this file: \resources\stage_2_de-bloat\oem\programs_to_target_by_GUID.txt
+ . Toolbar & BHOs (by GUID)      Use WMI to attempt to remove specific list of GUIDs in this file: \resources\stage_2_de-bloat\oem\toolbars_BHOs_to_target_by_GUID.txt
+ . Metro de-bloat                Remove many built-in Metro apps that aren't commonly used (does NOT remove things like Calculator, Paint) then purges them from the cache (can always fetch later from Windows Update). On Windows 8/8.1, removes all stock "Modern" apps. On Windows 10 and up, only removes a few specific Modern apps. Use the -sdb switch (skip ALL de-bloat) or -m switch (skip only Metro de-bloat) to skip this action. The list of Metro apps to target are in the \resources\stage_2_de-bloat\metro\ folder. Like the GUID lists above, you can also customize these files to add or remove apps from the target list. Note that the Metro de-bloat PowerShell scripts also support standalone execution, if for example you JUST want to remove Metro bloat from a machine.
+ . Remove OneDrive integration   Remove forced OneDrive integration (Windows 10 only). Tron first checks if any files exist in the default OneDrive folder (%USERPROFILE%\OneDrive\) and skips removal if any are found. As a an additional safety precaution, Tron leaves the OneDrive folder intact regardless whether OneDrive is removed or not. Use the -sor switch to skip OneDrive removal entirely.
+
+
+STAGE 3: Disinfect
+ . Clear CryptNet SSL cache      Wipe the Windows CryptNet SSL certificate cache by executing this command:  certutil -URLcache * delete
+ . Malwarebytes Anti-Malware     Anti-malware scanner. Because there is no command-line support for MBAM, we simply install it and continue with the rest of the script. This way a tech can click "scan" whenever they're around, but the script doesn't stall while waiting for user input. Use the -sa or -sm switches skip this component. Use the -pmb switch to NOT uninstall it at the end of the script
+ . Kaspersky Virus Removal Tool  Command-line anti-virus scanner. Use the -sa or -sk switches to skip this component
+ . Sophos Virus Removal Tool     Command-line anti-virus scanner. Use the -v switch to gives more verbose output. Use the -sa or -ss switches to skip this component
+
+
+STAGE 4: Repair
+ . MSI installer cleanup         Use the Microsoft 'msizap' utility to remove orphaned MSI installer files from the installer cache
+ . System File Checker           Microsoft utility for checking the filesystem for errors and attempting to repair if found. Tron runs this on Windows Vista and up only (XP and below require a reboot)
+ . DISM image check & repair     Microsoft utility for checking the Windows Image Store (basically like System File Checker on crack). Windows 8 and up only
+ . chkdsk                        Checks disk for errors and schedules a chkdsk with repair at next reboot
+ . Disable Windows "telemetry"   Disable Windows "telemetry" (user tracking), Windows 7 and up only. If the system is running Windows 7/8/8.1, Tron removes the "bad" updates Microsoft pushed to Windows 7/8/8.1 systems after the Windows 10 release. These updates backport the surveillance/spyware functions that are by default present in Windows 10. See the code to see exactly which updates are removed. Tron also stops and deletes the Diagtrack ("Diagnostics Tracking Service") service. If the system is running Windows 10, Tron does a more in-depth disabling of the Windows telemetry features, including automatically applying all the immunizations from the Spybot Anti-Beacon and O&O ShutUp10 tools. Go over the code in \tron\resources\stage_4_repair\disable_windows_telemetry\ to see exactly what is removed and disabled. NOTE: This section takes a LONG time to run, DO NOT CANCEL IT. Use the -str switch to just turn telemetry off instead of removing it
+ . Disable Windows 10 upgrade    Disables the Windows 10 upgrade nagger on Windows 7/8/8.1 by flipping the appropriate registry switches. Users can still manually upgrade the machine if they desire, but it will no longer nag via the system tray, auto-download, or auto-install Windows 10 without their permission
+ . Network repair                Tron performs minor network repair. Specifically it runs these commands: ipconfig /flushdns, netsh interface ip delete arpcache, netsh winsock reset catalog
+ . File extension repair         Tron repairs most default file extensions with a batch file that loops through a series of registry files stored in \tron\resources\stage_4_repair\repair_file_extensions\. Thanks to /u/cuddlychops06
+
+
+STAGE 5: Patch                   Tron installs or updates these programs:
+ . 7-zip                         Open-source compression and extraction tool. Far superior to just about everything (including the venerable WinRAR). Use the -sap switch to skip this action
+ . Windows updates               Runs Windows update via this command:  wuauclt /detectnow /updatenow
+ . DISM base reset               Recompile the "Windows Image Store" (SxS store deflation). This typically results in multiple GB's of space freed up. Windows 8 and up only. Any Windows Updates installed *prior* to this point will become "baked in" (uninstallable). Use the -sdc switch to skip this action
+
+
+STAGE 6: Optimize
+ . Page file reset               Reset the system page file settings to "let Windows manage the page file." Accomplished via this command: %WMIC% computersystem where name="%computername%" set AutomaticManagedPagefile=True. Use the -spr switch skips this action
+ . ngen .NET compilation         Tron executes the command 'ngen executeQueuedItems' to force .NET to finish any pending compilations. This typically speeds up Powershell launches
+ . Defraggler                    Command-line defrag tool from Piriform that's a little faster than the built-in Windows defragmenter
+
+
+STAGE 7: Wrap-up
+ . generate summary logs         Generate before and after logs detailing which files were deleted and which programs were removed. These are placed in LOGPATH\tron_summary_logs. Additionally, if -er switch was used or EMAIL_REPORT variable was set, these logs will be attached to the email that is sent out
+ . Create restore point          Create a post-run system restore point to mirror the one we created in Stage 0: Prep. Vista and up only, client OS's only, on Windows 10 does not work if the system is in any form of Safe Mode. See notes on System Restore in Stage 0 documentation for more information
+ . email_report                  Sends an email report with log file when Tron finishes. Requires you to specify your SMTP settings in \resources\stage_6_wrap-up\email_report\SwithMailSettings.xml
+ . upload debug logs             Upload 'tron.log' and the system GUID dump (list of all installed program GUIDs) to the Tron developer (vocatus). Please use this option if possible, log files are extremely helpful in developing Tron! NOTE: tron.log can contain personal information like names of files on the system, the computer name, user name, etc, so if you're concerned about this please look through a Tron log first to understand what will be sent. I don't care what files are on random systems on the Internet, but just something to be aware of
+ . Remove Malwarebytes           Automatically remove the Malwarebytes installation. Use the -pmb switch to skip this and leave it on the system
+
+
+STAGE 8: Custom Scripts
+ . Execute custom scripts        Tron will execute any .bat files placed in the \tron\resources\stage_8_custom_scripts directory. See "Executing 3rd-party Scripts" section above for more information
+
+
+STAGE 9: Manual tools            Tron does not run these automatically because most of them don't support command-line use, or are only useful in special cases
+ . ADSSpy                        Scan for hidden NTFS Alternate Data Streams
+ . AdwCleaner                    Popular user-suggested adware removal tool
+ . aswMBR                        Rootkit scanner
+ . autoruns                      Examine and remove programs that run at startup
+ . ComboFix                      The "scorched-earth policy" of malware removal. Only works on Windows XP through Windows 8 (no Windows 8.1 or above)
+ . PCHunter                      Tool to scan for rootkits and other malicious items. Replaces gmer
+ . Net Adapter Repair            Utility to repair most aspects of Windows network connections
+ . Remote Support Reboot Config  Tool to quickly configure auto-login and other parameters for running Tron via a remote connection. Thanks to /u/cuddlychops06
+ . Safe Mode Boot Selector.bat   Batch file to quickly select bootup method to use (Safe Mode, Network, etc). Thanks to /u/cuddlychops06
+ . ServicesRepair.exe            ESET utility for fixing broken Windows services
+ . TempFileCleaner               OldTimer utility for cleaning temp files
+ . Tron Reset Tool               Tool to quickly reset Tron if it gets interrupted or breaks while running
+ . VirusTotal uploader tool      Uploads a file directly to VirusTotal for scanning

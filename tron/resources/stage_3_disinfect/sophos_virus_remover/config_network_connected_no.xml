@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<sophos>
+  <productcode>{B829E117-D072-41EA-9606-9826A38D34C1}</productcode>
+  <description>You can safely ignore "could not open" errors during this portion</description>
+  <logfile></logfile>
+  <update enabled="no" user="SET66497" pass="r7rt19b6" />
+  <cloud4 enabled="no" url="https://4.sophosxl.net/lookup" />
+  <submit-url>https://disabled.com</submit-url>
+  <submit-hash>2a 61 92 1f 70 0e ea e9 c8 7b 4b a2 5c 6a 46 51 57 e0 ef a1</submit-hash>
+  <options all="no" recurse="yes" archive="no" service="yes" confirm="yes" sxl="yes" max-data-age="35" EnableSafeClean="no" vdl-logging="yes" />
+  <watchdog enabled="yes" timeoutmin="60" />
+  <scan area="system" raw="no"/>
+  <scan area="systemmemory"/>
+  <scan area="memory"/>
+  <scan area="registry"/>
+  <scan area="rootkit"/>
+  <scan area="boot"/>
+</sophos>
