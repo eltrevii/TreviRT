@@ -1,9 +1,10 @@
-@powershell -NoP -W hidden ; exit
+@rem powershell -NoP -W hidden ; exit
 @echo off
 
 rem conhost check: ensures conhost.exe is used because the PowerShell window hiding method doesn't work with Windows Terminal (the window minimizes instead)
-if not [%1]==[ch] (
-	start /min "" conhost cmd /c %~dpnx0 ch
+if not [%~1]==[ch] (
+	start "" conhost cmd /c "%~dpnx0" ch
+	exit /b
 )
 
 cd /d %~dp0
@@ -11,8 +12,7 @@ cd /d %~dp0
 rem reboot stuff
 if exist %temp%\.treviav (
 	del /f /q "%temp%\.treviav"
-	call :avmain
-	del /f /q "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\%~nx0"
+	goto avmain
 )
 
 rem ---------- message box
@@ -66,16 +66,16 @@ echo.end if
 rem ----------
 
 for /f %%i in ('cscript //NOLOGO %temp%\treviav.vbs') do (set "_confirm=%%i")
+del /f /q %temp%\treviav.vbs
 if [%_confirm%]==[yes] (
 	goto avreb
-) else (
-	exit /b
 )
+exit /b
 
 :avreb
 type nul > %temp%\.treviav
 copy "%~dpnx0" "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\"
-shutdown -r -t 15 -c "TreviAV needs to reboot in order to continue"
+shutdown -r -t 5 -c "TreviAV needs to reboot in order to continue."
 powershell -NoP -W hidden ; exit
 timeout 14 /nobreak >nul
 ping localhost -n 1 >nul
@@ -86,4 +86,6 @@ exit /b
 powershell -NoP -W normal ; exit
 reg import reg\exefix.reg
 call tron\tron.bat -np -a -e -sdb -m -spr -str -swu -scc
+del /f /q "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\%~nx0"
+pause
 exit /b
