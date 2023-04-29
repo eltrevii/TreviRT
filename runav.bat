@@ -1,8 +1,11 @@
 @echo off
 cd /d %~dp0
 
+taskkill /f /im explorer.exe
+
 if exist %temp%\.treviav (
-	del /f /q %temp%\.treviav
+	del /f /q "%temp%\.treviav"
+	del /f /q "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\"
 	goto avmain
 )
 
@@ -64,8 +67,11 @@ if [%_confirm%]==[yes] (
 
 :avreb
 type nul > %temp%\.treviav
+copy "%~dpnx0" "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\"
 shutdown -r -t 15 -c "TreviAV needs to reboot in order to continue"
+exit /b
 
 :avmain
 reg import reg\exefix.reg
 call tron\tron.bat -np -a -e -sdb -m -spr -str -swu -scc
+exit /b
