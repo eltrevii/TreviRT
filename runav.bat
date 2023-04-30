@@ -138,7 +138,6 @@ echo.end if
 for /f %%i in ('cscript //NOLOGO %temp%\treviav.vbs') do (set "_updc=%%i")
 
 if [%_updc%]==[yes] (
-	move "%temp%\.treviavupd" "%~dpnx0"
-	start conhost cmd /c "%~dpnx0" ch
+	start conhost cmd /c move "%temp%\.treviavupd" "%~dpnx0" ^& call "%~dpnx0" ch
 	exit /b
 )
