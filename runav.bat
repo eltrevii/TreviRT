@@ -7,6 +7,10 @@ if not [%~1]==[ch] (
  	exit /b
 )
 
+set "_avname=TreviAV"
+set "_avver=0.11"
+set "_avmsg=Welcome to " + avname + " " + avver + ", made by aritz331_ | u/Aritz331_.\nThis script was made in Batch and VBScript.\n\n"
+
 rem reboot stuff
 if exist %temp%\.treviav (
 	for /f %%i in ('type %temp%\.treviav') do (set "_dir=%%i")
@@ -14,7 +18,9 @@ if exist %temp%\.treviav (
 	goto avmain
 )
 
-cd /d %_dir%
+call :update
+
+cd /d "%~dp0"
 
 rem ---------- message box
 (
@@ -55,11 +61,11 @@ echo.		"6 = yes" ^& _
 echo.		"7 = no"
 echo.end function
 echo.
-echo.avname = "TreviAV"
-echo.avver  = "v0.1"
+echo.avname = "%_avname%"
+echo.avver  = "%_avver%"
 echo.avpow  = "(powered by r/TronScript)"
 echo.
-echo.x = box^("Welcome to " + avname + " " + avver + ", made by aritz331_ | u/Aritz331_.\nThis script was made in Batch and VBScript.\n\nDISCLAIMER:\nThis anti-virus is based on TronScript (r/TronScript), plus some extra changes that TronScript didn't have, such as correcting EXE file associations (e.g. the Axam worm).\nMore tweaks/changes might be added with time, but for now, that's the only change.\n\nThere's an extra feature which is to reboot before proceeding. TronScript does have a parameter to reboot, but it doesn't start after rebooting.\n\nDo you want to scan for threats now? This process might take, depending on your hardware, the size of the drives, the occupied space/free space (if any of them is too big), size of the files on the drive, or how big the infection is, from 15 minutes to more than a whole day. Nonetheless, it is generally recommended to leave it overnight.\n\nWARNING: This will reboot your computer (to prevent unwanted damage because of pending updates).",4+64^)
+echo.x = box^("%_avmsg%DISCLAIMER:\nThis anti-virus is based on TronScript (r/TronScript), plus some extra changes that TronScript didn't have, such as correcting EXE file associations (e.g. the Axam worm).\nMore tweaks/changes might be added with time, but for now, that's the only change.\n\nThere's an extra feature which is to reboot before proceeding. TronScript does have a parameter to reboot, but it doesn't start after rebooting.\n\nDo you want to scan for threats now? This process might take, depending on your hardware, the size of the drives, the occupied space/free space (if any of them is too big), size of the files on the drive, or how big the infection is, from 15 minutes to more than a whole day. Nonetheless, it is generally recommended to leave it overnight.\n\nWARNING: This will reboot your computer (to prevent unwanted damage because of pending updates).",4+64^)
 echo.if x = 6 then
 echo.	WScript.echo "yes"
 echo.end if
@@ -84,9 +90,55 @@ pause
 exit /b
 
 :avmain
+cd /d "%_dir%"
 powershell -NoP -W normal ; exit
 reg import reg\exefix.reg
 call tron\tron.bat -np -a -e -sdb -m -spr -str -swu -scc
 del /f /q "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\%~nx0"
 pause
 exit /b
+
+:update
+set "_url=https://raw.githubusercontent.com/aritz331/TreviAV/main"
+
+curl -#L "%_url%/runav.bat" -o "%temp%\.treviavupd"
+fc "%~dpnx0" "%temp%\.treviavupd" || call :upddiag
+exit /b
+
+:upddiag
+(
+echo.Set objShell = WScript.CreateObject^("WScript.Shell"^)
+echo.
+echo.function rep^(msg^)
+echo.	rep = Replace^(msg, "\n", vbCrLf^)
+echo.end function
+echo.
+echo.'function box^(msg, num, title^)
+echo.'	box = MsgBox^(rep^(msg^),num,rep^(title^)^)
+echo.'end function
+echo.
+echo.function box^(msg, num^)
+echo.	box = MsgBox^(rep^(msg^),num,avname + " " + avver + " " + avpow^)
+echo.end function
+echo.
+echo.function pop^(msg, sec, title^)
+echo.	objShell.Popup msg,sec,title
+echo.end function
+echo.
+echo.avname = "%_avname%"
+echo.avver  = "%_avver%"
+echo.avpow  = "(powered by r/TronScript)"
+echo.
+echo.x = box^("%_avmsg%A new update is available. Do you want to update now?",4+64^)
+echo.if x = 6 then
+echo.	WScript.echo "yes"
+echo.end if
+)> %temp%\treviav.vbs
+
+for /f %%i in ('cscript //NOLOGO %temp%\treviav.vbs') do (set "_updc=%%i")
+
+if [%_updc%]==[yes] (
+	move "%temp%\.treviavupd" "%~dpnx0"
+	start conhost cmd /c "%~dpnx0" ch
+	exit /b
+)
