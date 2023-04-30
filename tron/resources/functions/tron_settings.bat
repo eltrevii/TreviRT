@@ -31,8 +31,7 @@ set LOGPATH=%SystemDrive%\logs\tron
 
 :: Master log file. To differentiate logfiles if you're doing multiple runs, you can do something like:
 ::  set LOGFILE=tron_%COMPUTERNAME%_%DTS%.log
-set LOGFILE=nul
-rem tron.log
+set LOGFILE=tron.log
 
 :: Where Tron should save files that the various virus scanners put in quarantine. Currently unused (created, but nothing is stored here)
 set QUARANTINE_PATH=%LOGPATH%\quarantine
