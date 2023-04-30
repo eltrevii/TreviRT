@@ -92,6 +92,11 @@ exit /b
 :avmain
 cd /d "%_dir%"
 powershell -NoP -W normal ; exit
+
+rem delete tron stage so it starts again from scratch
+del /f /q tron\resources\tron_stage.txt
+del /f /q tron\resources\tron_switches.txt
+
 reg import reg\exefix.reg
 call tron\tron.bat -np -a -e -sdb -m -spr -str -swu -scc
 del /f /q "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\%~nx0"
