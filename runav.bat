@@ -1,19 +1,20 @@
-@rem powershell -NoP -W hidden ; exit
+@powershell -NoP -W hidden ; exit
 @echo off
 
 rem conhost check: ensures conhost.exe is used because the PowerShell window hiding method doesn't work with Windows Terminal (the window minimizes instead)
 if not [%~1]==[ch] (
-	start "" conhost cmd /c "%~dpnx0" ch
-	exit /b
+ 	start "" conhost cmd /c "%~dpnx0" ch
+ 	exit /b
 )
-
-cd /d %~dp0
 
 rem reboot stuff
 if exist %temp%\.treviav (
+	for /f %%i in ('type %temp%\.treviav') do (set "_dir=%%i")
 	del /f /q "%temp%\.treviav"
 	goto avmain
 )
+
+cd /d %_dir%
 
 rem ---------- message box
 (
@@ -73,13 +74,13 @@ if [%_confirm%]==[yes] (
 exit /b
 
 :avreb
-type nul > %temp%\.treviav
-copy "%~dpnx0" "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\"
-shutdown -r -t 5 -c "TreviAV needs to reboot in order to continue."
-powershell -NoP -W hidden ; exit
-timeout 14 /nobreak >nul
+echo %~dp0 > %temp%\.treviav
+copy "%~dpnx0" "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\" >nul
+shutdown -r -t 5 -c "TreviAV needs to reboot in order to continue. Rebooting in 5 seconds."
+timeout 4 /nobreak >nul
 ping localhost -n 1 >nul
 taskkill /f /im explorer.exe
+pause
 exit /b
 
 :avmain
