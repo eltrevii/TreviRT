@@ -6,16 +6,22 @@ if not [%~1]==[ch] (
  	start "" conhost cmd /c "%~dpnx0" ch
  	exit /b
 )
+shift
 
 set "_avname=TreviAV"
-set "_avver=0.11"
+set "_avver=0.12"
 set "_avmsg=Welcome to " + avname + " " + avver + ", made by aritz331_ | u/Aritz331_.\nThis script was made in Batch and VBScript.\n\n"
 
 rem reboot stuff
-if exist %temp%\.treviav (
-	for /f %%i in ('type %temp%\.treviav') do (set "_dir=%%i")
-	del /f /q "%temp%\.treviav"
-	goto avmain
+rem if exist %temp%\.treviav (
+	rem for /f %%i in ('type %temp%\.treviav') do (set "_dir=%%i")
+	rem del /f /q "%temp%\.treviav"
+	rem goto avmain
+rem )
+
+if [%~1]==[-startup] (
+	call :admin
+	goto :avmain
 )
 
 call :update
@@ -80,8 +86,14 @@ if [%_confirm%]==[yes] (
 exit /b
 
 :avreb
-echo %~dp0 > %temp%\.treviav
-copy "%~dpnx0" "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\" >nul
+rem echo %~dp0 > %temp%\.treviav
+rem copy "%~dpnx0" "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\" >nul
+
+(
+	echo @echo off
+	echo start cmd /c "%~dpnx0" -startup
+	echo exit
+) > "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\"
 shutdown -r -t 5 -c "TreviAV needs to reboot in order to continue. Rebooting in 5 seconds."
 timeout 4 /nobreak >nul
 ping localhost -n 1 >nul
@@ -99,7 +111,7 @@ del /f /q tron\resources\tron_switches.txt
 
 reg import reg\exefix.reg
 call tron\tron.bat -np -a -e -sdb -m -spr -str -swu -scc
-del /f /q "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\%~nx0"
+rem del /f /q "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\%~nx0"
 pause
 exit /b
 
@@ -146,3 +158,36 @@ if [%_updc%]==[yes] (
 	start conhost cmd /c timeout 1 ^& move "%temp%\.treviavupd" "%~dpnx0" ^& call "%~dpnx0" ch
 	exit
 )
+exit /b
+
+:admin
+:: BatchGotAdmin
+:-------------------------------------
+REM  --> Check for permissions
+    IF "%PROCESSOR_ARCHITECTURE%" EQU "amd64" (
+>nul 2>&1 "%SYSTEMROOT%\SysWOW64\cacls.exe" "%SYSTEMROOT%\SysWOW64\config\system"
+) ELSE (
+>nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
+)
+
+REM --> If error flag set, we do not have admin.
+if '%errorlevel%' NEQ '0' (
+    echo Requesting administrative privileges...
+    goto UACPrompt
+) else ( goto gotAdmin )
+
+:UACPrompt
+    echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\getadmin.vbs"
+    set params=%*
+    echo UAC.ShellExecute "cmd.exe", "/c ""%~s0"" %params:"=""%", "", "runas", 1 >> "%temp%\getadmin.vbs"
+
+    "%temp%\getadmin.vbs"
+    del "%temp%\getadmin.vbs"
+    exit /B
+
+:gotAdmin
+    pushd "%CD%"
+    CD /D "%~dp0"
+:--------------------------------------    
+
+exit /b
