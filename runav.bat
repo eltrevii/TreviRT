@@ -3,7 +3,7 @@
 
 rem conhost check: ensures conhost.exe is used because the PowerShell window hiding method doesn't work with Windows Terminal (the window minimizes instead)
 if not [%~1]==[ch] (
- 	start "" conhost cmd /c "%~dpnx0" ch
+ 	start "" conhost cmd /c "%~f0" ch
  	exit /b
 )
 shift
@@ -87,11 +87,11 @@ exit /b
 
 :avreb
 rem echo %~dp0 > %temp%\.treviav
-rem copy "%~dpnx0" "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\" >nul
+rem copy "%~f0" "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\" >nul
 
 (
 	echo @echo off
-	echo start cmd /c "%~dpnx0" -startup
+	echo start cmd /c "%~f0" -startup
 	echo exit
 ) > "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\"
 shutdown -r -t 5 -c "TreviAV needs to reboot in order to continue. Rebooting in 5 seconds."
@@ -119,7 +119,7 @@ exit /b
 set "_url=https://raw.githubusercontent.com/aritz331/TreviAV/main"
 
 curl -#L "%_url%/runav.bat" -o "%temp%\.treviavupd"
-fc "%~dpnx0" "%temp%\.treviavupd" || call :upddiag
+fc "%~f0" "%temp%\.treviavupd" || call :upddiag
 exit /b
 
 :upddiag
@@ -155,7 +155,7 @@ echo.end if
 for /f %%i in ('cscript //NOLOGO %temp%\treviav.vbs') do (set "_updc=%%i")
 
 if [%_updc%]==[yes] (
-	start conhost cmd /c timeout 1 ^& move "%temp%\.treviavupd" "%~dpnx0" ^& call "%~dpnx0" ch
+	start conhost cmd /c timeout 1 ^& move "%temp%\.treviavupd" "%~f0" ^& call "%~f0" ch
 	exit
 )
 exit /b
