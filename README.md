@@ -1,5 +1,5 @@
 # TreviAV
-My own anti-virus, based on [r/TronScript](https://old.reddit.com/r/TronScript/).
+My own anti-virus/launcher/extension, based on [r/TronScript](https://old.reddit.com/r/TronScript/).
 
 > **Note**\
 > For now, this is just an _extension_ for TronScript because the only new stuff is the addition of rebooting in normal mode before starting TronScript and resetting EXE file associations to their default (e.g. Axam worm).
