@@ -1,4 +1,4 @@
-# TreviAV
+# Trevi's Repair Tool
 My own anti-virus/launcher/extension, based on [r/TronScript](https://old.reddit.com/r/TronScript/).
 
 > **Note**\
