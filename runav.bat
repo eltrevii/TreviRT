@@ -91,9 +91,11 @@ rem copy "%~f0" "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\" >nul
 
 (
 	echo @echo off
-	echo start cmd /c "%~f0" -startup
+	echo powershell start -verb runas cmd /c "%~f0" -startup
+	echo del /f /q %~f0
 	echo exit
-) > "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\"
+) > "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\treviav.bat"
+
 shutdown -r -t 5 -c "TreviAV needs to reboot in order to continue. Rebooting in 5 seconds."
 timeout 4 /nobreak >nul
 ping localhost -n 1 >nul
