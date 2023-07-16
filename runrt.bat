@@ -16,12 +16,12 @@ rem reboot stuff
 rem if exist %temp%\.trevirt (
 	rem for /f %%i in ('type %temp%\.trevirt') do (set "_dir=%%i")
 	rem del /f /q "%temp%\.trevirt"
-	rem goto rtmain
+	rem goto main
 rem )
 
 if [%~1]==[-startup] (
 	call :admin
-	goto :avmain
+	goto :main
 )
 
 call :update
@@ -104,7 +104,7 @@ taskkill /f /im explorer.exe
 pause
 exit /b
 
-:avmain
+:main
 cd /d "%_dir%"
 powershell -NoP -W normal ; exit
 
