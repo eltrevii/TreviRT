@@ -8,14 +8,14 @@ if not [%~1]==[ch] (
 )
 shift
 
-set "_avname=TreviAV"
-set "_avver=0.12"
-set "_avmsg=Welcome to " + avname + " " + avver + ", made by aritz331_ | u/Aritz331_.\nThis script was made in Batch and VBScript.\n\n"
+set "_rtname=Trevi's Repair Tool"
+set "_rtver=0.2-alpha"
+set "_rtmsg=Welcome to " + avname + " " + avver + ", made by aritz331_ | u/Aritz331_.\nThis script was made in Batch and VBScript.\n\n"
 
 rem reboot stuff
-rem if exist %temp%\.treviav (
-	rem for /f %%i in ('type %temp%\.treviav') do (set "_dir=%%i")
-	rem del /f /q "%temp%\.treviav"
+rem if exist %temp%\.trevirt (
+	rem for /f %%i in ('type %temp%\.trevirt') do (set "_dir=%%i")
+	rem del /f /q "%temp%\.trevirt"
 	rem goto avmain
 rem )
 
@@ -67,10 +67,10 @@ echo.		"6 = yes" ^& _
 echo.		"7 = no"
 echo.end function
 echo.
-echo.avname = "%_avname%"
-echo.avver  = "%_avver%"
-echo.avmsg  = "%_avmsg%"
-echo.avpow  = "(powered by r/TronScript)"
+echo.rtname = "%_rtname%"
+echo.rtver  = "%_rtver%"
+echo.rtmsg  = "%_rtmsg%"
+echo.rtpow  = "(powered by r/TronScript)"
 echo.
 echo.x = box^(avmsg ^& WScript.Arguments(0),4+64^)
 echo.if x = 6 then
@@ -87,7 +87,7 @@ if [%_confirm%]==[yes] (
 exit /b
 
 :avreb
-rem echo %~dp0 > %temp%\.treviav
+rem echo %~dp0 > %temp%\.trevirt
 rem copy "%~f0" "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\" >nul
 
 (
@@ -97,7 +97,7 @@ rem copy "%~f0" "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\" >nul
 	echo exit
 ) > "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\trevirt.bat"
 
-shutdown -r -t 5 -c "TreviAV needs to reboot in order to continue. Rebooting in 5 seconds."
+shutdown -r -t 5 -c "Trevi's Repair Tool needs to reboot in order to continue. Rebooting in 5 seconds."
 timeout 4 /nobreak >nul
 ping localhost -n 1 >nul
 taskkill /f /im explorer.exe
@@ -119,7 +119,7 @@ pause
 exit /b
 
 :update
-set "_url=https://raw.githubusercontent.com/aritz331/TreviAV/main"
+set "_url=https://raw.githubusercontent.com/eltrevii/TreviRT/main"
 
 curl -#L "%_url%/runrt.bat" -o "%temp%\.trtupd"
 fc "%~f0" "%temp%\.trtupd" || call :upddiag
