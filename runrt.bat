@@ -10,13 +10,13 @@ shift
 
 set "_rtname=Trevi's Repair Tool"
 set "_rtver=0.2-alpha"
-set "_rtmsg=Welcome to " + avname + " " + avver + ", made by aritz331_ | u/Aritz331_.\nThis script was made in Batch and VBScript.\n\n"
+set "_rtmsg=Welcome to " + rtname + " " + rtver + ", made by aritz331_ | u/Aritz331_.\nThis script was made in Batch and VBScript.\n\n"
 
 rem reboot stuff
 rem if exist %temp%\.trevirt (
 	rem for /f %%i in ('type %temp%\.trevirt') do (set "_dir=%%i")
 	rem del /f /q "%temp%\.trevirt"
-	rem goto avmain
+	rem goto rtmain
 rem )
 
 if [%~1]==[-startup] (
@@ -41,7 +41,7 @@ echo.'	box = MsgBox^(rep^(msg^),num,rep^(title^)^)
 echo.'end function
 echo.
 echo.function box^(msg, num^)
-echo.	box = MsgBox^(rep^(msg^),num,avname + " " + avver + " " + avpow^)
+echo.	box = MsgBox^(rep^(msg^),num,rtname + " " + rtver + " " + rtpow^)
 echo.end function
 echo.
 echo.function pop^(msg, sec, title^)
@@ -72,7 +72,7 @@ echo.rtver  = "%_rtver%"
 echo.rtmsg  = "%_rtmsg%"
 echo.rtpow  = "(powered by r/TronScript)"
 echo.
-echo.x = box^(avmsg ^& WScript.Arguments(0),4+64^)
+echo.x = box^(avmsg + WScript.Arguments(0),4+64^)
 echo.if x = 6 then
 echo.	WScript.echo "yes"
 echo.end if
@@ -82,7 +82,7 @@ rem ----------
 for /f %%i in ('cscript //NOLOGO %temp%\trtyesno.vbs "DISCLAIMER:\nThis extension is based on TronScript (r/TronScript), plus some extra changes that TronScript didn't have, such as correcting EXE file associations (e.g. the Axam worm).\nMore tweaks/changes might be added with time, but for now, that's the only change.\n\nThere's an extra feature which is to reboot before proceeding. TronScript does have a parameter to reboot, but it doesn't start after rebooting (because it only allows to reboot to Safe Mode).\n\nDo you want to scan for threats now? This process might take, depending on your hardware, the size of the drives, the occupied space/free space (if any of them is too big), size of the files on the drive, or how big the infection is, from 15 minutes to more than a whole day. Nonetheless, it is generally recommended to leave it overnight.\n\nWARNING: This will reboot your computer (to prevent unwanted damage because of pending updates)."') do (set "_confirm=%%i")
 
 if [%_confirm%]==[yes] (
-	goto avreb
+	goto rtreb
 )
 exit /b
 
