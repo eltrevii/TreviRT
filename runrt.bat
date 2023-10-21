@@ -9,8 +9,11 @@ if not [%*]==[ch] (
 shift
 
 set "_rtname=Trevi's Repair Tool"
-set "_rtver=0.2-alpha"
+set "_rtver=0.21-alpha"
 set "_rtmsg=Welcome to " + rtname + " " + rtver + ", made by aritz331_ | u/Aritz331_.\nThis script was made in Batch and VBScript.\n\n"
+
+set "_msg.start=DISCLAIMER:\nThis extension is based on TronScript (r/TronScript), plus some extra changes that TronScript didn't have, such as correcting EXE file associations (e.g. the Axam worm).\nMore tweaks/changes might be added with time, but for now, that's the only change.\n\nThere's an extra feature which is to reboot before proceeding. TronScript does have a parameter to reboot, but it doesn't start after rebooting (because it only allows to reboot to Safe Mode).\n\nDo you want to scan for threats now? This process might take, depending on your hardware, the size of the drives, the occupied space/free space (if any of them is too big), size of the files on the drive, or how big the infection is, from 15 minutes to more than a whole day. Nonetheless, it is generally recommended to leave it overnight.\n\nWARNING: This will reboot your computer (to prevent unwanted damage because of pending updates)."
+set "_msg.update=A new version of TreviRT is available.\nDo you want to update?"
 
 rem reboot stuff
 rem if exist %temp%\.trevirt (
@@ -76,12 +79,12 @@ echo.x = box^(avmsg + WScript.Arguments(0),4+64^)
 echo.if x = 6 then
 echo.	WScript.echo "yes"
 echo.end if
-)> %temp%\trtyesno.vbs
+)> %temp%\trtyn.vbs
 rem ----------
 
-for /f %%i in ('cscript //NOLOGO %temp%\trtyesno.vbs "DISCLAIMER:\nThis extension is based on TronScript (r/TronScript), plus some extra changes that TronScript didn't have, such as correcting EXE file associations (e.g. the Axam worm).\nMore tweaks/changes might be added with time, but for now, that's the only change.\n\nThere's an extra feature which is to reboot before proceeding. TronScript does have a parameter to reboot, but it doesn't start after rebooting (because it only allows to reboot to Safe Mode).\n\nDo you want to scan for threats now? This process might take, depending on your hardware, the size of the drives, the occupied space/free space (if any of them is too big), size of the files on the drive, or how big the infection is, from 15 minutes to more than a whole day. Nonetheless, it is generally recommended to leave it overnight.\n\nWARNING: This will reboot your computer (to prevent unwanted damage because of pending updates)."') do (set "_confirm=%%i")
+call :tyesno "%_msg.start%"
 
-if [%_confirm%]==[yes] (
+if [%_yesno%]==[yes] (
 	goto rtreb
 )
 exit /b
@@ -122,16 +125,20 @@ exit /b
 set "_url=https://raw.githubusercontent.com/eltrevii/TreviRT/main"
 
 curl -#L "%_url%/runrt.bat" -o "%temp%\.trtupd"
-fc "%~f0" "%temp%\.trtupd" || call :upddiag
+fc "%~f0" "%temp%\.trtupd" || call :upddlg
 exit /b
 
-:upddiag
-for /f %%i in ('cscript //NOLOGO %temp%\trtyesno.vbs') do (set "_updc=%%i")
+:upddlg
+call :tmsg "%_msg.update%"
 
-if [%_updc%]==[yes] (
+if [%_yesno%]==[yes] (
 	start conhost cmd /c timeout 1 ^& move "%temp%\.trtupd" "%~f0" ^& call "%~f0" ch
 	exit
 )
+exit /b
+
+:tyesno
+for /f %%i in ('cscript //NOLOGO %temp%\trtyn.vbs "%~1"') do (set "_yesno=%%i")
 exit /b
 
 :admin
