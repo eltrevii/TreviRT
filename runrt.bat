@@ -10,7 +10,7 @@ shift
 
 set "_rtname=Trevi's Repair Tool"
 set "_rtver=0.21-alpha"
-set "_rtmsg=Welcome to " + rtname + " " + rtver + ", made by aritz331_ | u/Aritz331_.\nThis script was made in Batch and VBScript.\n\n"
+set "_rtmsg=Welcome to " + rtname + " " + rtver + ", made by trevics_ | u/Aritz331_.\nThis script was made in Batch and VBScript.\n\n"
 
 set "_msg.start=DISCLAIMER:\nThis extension is based on TronScript (r/TronScript), plus some extra changes TS didn't have, such as correcting EXE file associations (e.g. the Axam worm) and rebooting (normal mode) before proceeding.\nMore tweaks/changes will be added in the future.\n\nDo you want to scan for threats now? This process might take, depending on your hardware, the size of the drives, the occupied space/free space (if any of them is too big), size of the files on the drive, or how big the infection is, from 15 minutes to over a day. Nonetheless, it is generally recommended to leave it running overnight.\n\nWARNING: This will reboot your computer to prevent unwanted damage because of pending updates."
 set "_msg.update=A new version of TreviRT is available.\nDo you want to update?"
