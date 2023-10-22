@@ -1,5 +1,5 @@
-title: y
-name: hello worl
+name: v
+title: null
 
 plugins:
   - jekyll-relative-links
