@@ -1,30 +1,93 @@
-name: Build and Deploy
+name: Deploy site on main
+
 on:
   push:
-    branches:
-      - main
+    branches: main
+
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
-  build:
-    name: Build and Deploy
+  install:
+    name: Install deps
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      - name: Cache node modules
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules-v1
+        with:
+          path: |
+            ~/.npm
+            node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+            
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          
+      - name: Install Node.js dependencies
+        run: npm i
+        
+  build:
+    needs: install
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout with submodules
+        uses: actions/checkout@v3
+        with:
+          submodules: true # Install themes
+          fetch-depth: 0 # We need all history for .GitInfo and .Lastmod
+          
+      - name: Restore node modules
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules-v1
+        with:
+          path: |
+            ~/.npm
+            node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+          
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-        # with:
-        #   persist-credentials: false
-      - name: Install
-        run: npm ci
-      - name: Build
-        run: npm run build
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4.4.0
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master'}}
-        with:
-          folder: .vuepress/dist/
-          clean: true
 
+      - name: Build the website
+        run: npm run build
+        
+      - run: rm -rf ./node_modules/
+      
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: docs
+
+  deploy:
+    needs: build
+
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:    
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
