@@ -1,0 +1,28 @@
+{
+	"name": "a",
+	"private": true,
+	"version": "1.0.0",
+	"description": "hi",
+	"author": {
+		"name": "trevi",
+		"url": "https://eltrevii.github.io/"
+	},
+	"scripts": {
+		"build": "eleventy",
+		"dev": "eleventy --serve"
+	},
+	"engines": {
+		"node": "16"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/eltrevii/link"
+	},
+	"license": "MIT",
+	"homepage": "https://github.com/eltrevii/link",
+	"dependencies": {
+		"@11ty/eleventy": "1.0.1",
+		"clean-css": "^5.3.0",
+		"html-minifier": "^4.0.0"
+	}
+}
