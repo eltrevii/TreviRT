@@ -1,5 +1,5 @@
 name: TreviRT
-title: what
+title: null
 
 plugins:
   - jekyll-relative-links
