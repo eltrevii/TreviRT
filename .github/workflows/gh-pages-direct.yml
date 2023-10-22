@@ -1,8 +1,7 @@
 name: Deploy site on main
 
 on:
-  push:
-    branches: main
+  workflow_dispatch:
 
 permissions:
   contents: read
