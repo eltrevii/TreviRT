@@ -8,7 +8,7 @@ if not [%*]==[ch] (
 )
 shift
 
-set "_rtname=Trevi's Repair Tool"
+set "_rtname=Trevi's Repair Tool | TreviRT"
 set "_rtver=0.21-alpha"
 set "_rtmsg=Welcome to " + rtname + " " + rtver + ", made by trevics_ | u/Aritz331_.\nThis script was made in Batch and VBScript.\n\n"
 
@@ -96,11 +96,10 @@ rem copy "%~f0" "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\" >nul
 (
 	echo @echo off
 	echo powershell start -verb runas cmd /c "%~f0" -startup
-	echo del /f /q %~f0
-	echo exit
+	echo del /f /q %~f0 ^& exit
 ) > "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\trevirt.bat"
 
-shutdown -r -t 5 -c "Trevi's Repair Tool needs to reboot in order to continue. Rebooting in 5 seconds."
+shutdown -r -t 5 -c "TreviRT needs to reboot in order to continue. Rebooting in 5 seconds."
 timeout 4 /nobreak >nul
 ping localhost -n 1 >nul
 taskkill /f /im explorer.exe
