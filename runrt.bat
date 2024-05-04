@@ -2,8 +2,8 @@
 @echo off
 
 rem conhost check: ensures conhost.exe is used because the PowerShell window hiding method doesn't work with Windows Terminal (the window minimizes instead)
-if not [%*]==[ch] (
- 	start "" conhost cmd /c "%~f0" %* ch
+if not [%1]==[ch] (
+ 	start "" conhost cmd /c "%~f0" ch %*
  	exit /b
 )
 shift
