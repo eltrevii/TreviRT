@@ -1,7 +1,7 @@
 # Trevi's Repair Tool
 My own extension for [r/TronScript](https://old.reddit.com/r/TronScript/).
 
-> **Note**
+> [!NOTE]
 > **Features**\
 > For now, this is just an _extension_ for TronScript because the only new stuff is the addition of rebooting in normal mode before starting TronScript and resetting EXE file associations to their default (e.g. Axam worm). This extension is currently incomplete and might not work properly.
 
