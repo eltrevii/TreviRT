@@ -7,5 +7,5 @@ My own extension for [r/TronScript](https://old.reddit.com/r/TronScript/).
 
 To download it, click Code, and then Download ZIP, or use [this link](https://github.com/aritz331/TreviAV/archive/refs/heads/main.zip).
 
-> **Warning**
+> [!WARNING]
 > You must download Tron separately for now. I'll make the script download TronScript automatically soon.
